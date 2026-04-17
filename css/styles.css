@@ -49,8 +49,8 @@ body {
     background-color: #faf0df;
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding-top: 60px; /* espacio para el nav fixed */
+    min-height: 10vh;
+    padding-top: 30px;
 }
 
 .headerTextos {
@@ -254,4 +254,9 @@ body {
     .porque-texto h2 {
         font-size: 1.7rem;
     }
+}
+
+.etiqueta {
+    font-size: 1rem;
+    margin-bottom: 3rem;
 }
