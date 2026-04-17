@@ -44,16 +44,17 @@ body {
 .miNav a:hover {
     color: #c9a84c;
 }
-
-.headerContenedor {
+/****************************************************/
+/********************* MAIN **********************/
+.titulosContenedor {
     background-color: #faf0df;
     position: relative;
     width: 100%;
-    min-height: 10vh;
-    padding-top: 30px;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
-
-.headerTextos {
+.titutlosTextos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +65,7 @@ body {
     padding: 40px 0;
 }
 
-.headerTextos h1 {
+.titutlosTextos h1 {
     font-size: 3rem;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
@@ -72,7 +73,7 @@ body {
     color: #1a3c5e;
 }
 
-.headerTextos > h2 {
+.titutlosTextos > h2 {
     font-size: 2rem;
     color: #1a3c5e;
     margin-top: 2px;
@@ -80,14 +81,13 @@ body {
     text-transform: uppercase;
 }
 
-.headerTextos > p {
+.titutlosTextos > p {
     color: #c9a84c;
     margin-top: 2px;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
 }
 
-/* ===== CARRUSEL ===== */
 
 .carousel-wrapper {
     width: 100%;
@@ -100,48 +100,44 @@ body {
 
 .carousel-inner img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
-    filter: brightness(0.65);
+    filter: brightness(0.55);
 }
 
 .carousel-caption {
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     text-align: left;
 }
 
 .carousel-caption h5 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.5rem;
     letter-spacing: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .carousel-caption p {
     color: #faf0df;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
     opacity: 0.9;
-    max-width: 500px;
 }
-
-/****************************************************/
-/********************* MAIN **********************/
 
 .porque {
     background-color: var(--azul-oscuro);
-    padding: 80px 40px;
+    padding: 50px 20px;
 }
 
 .porque-grid {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    gap: 60px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .porque-texto {
@@ -150,7 +146,7 @@ body {
 
 .etiqueta {
     display: inline-block;
-    font-size: 11px;
+    font-size: 10px;
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -162,7 +158,7 @@ body {
 
 .porque-texto h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     color: var(--blanco);
     margin-bottom: 16px;
     line-height: 1.2;
@@ -171,7 +167,7 @@ body {
 .porque-texto p {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .porque-items {
@@ -203,60 +199,43 @@ body {
 
 .porque-item h4 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--blanco);
     margin-bottom: 6px;
     letter-spacing: 0.5px;
 }
 
 .porque-item p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin: 0;
 }
 
-/****************************************************/
-/********************* RESPONSIVE **********************/
-
-@media (max-width: 768px) {
-    .headerTextos h1 {
-        font-size: 1.8rem;
-    }
-
-    .carousel-inner img {
-        height: 260px;
-    }
-
-    .carousel-caption {
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-    }
-
-    .carousel-caption h5 {
-        font-size: 1.2rem;
-    }
-
-    .carousel-caption p {
-        font-size: 0.8rem;
-    }
-
+@media (min-width: 768px) {
     .porque {
-        padding: 50px 20px;
+        padding: 80px 40px;
     }
 
     .porque-grid {
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: row;
+        gap: 60px;
+        align-items: flex-start;
     }
 
     .porque-texto h2 {
-        font-size: 1.7rem;
+        font-size: 2.2rem;
     }
-}
 
-.etiqueta {
-    font-size: 1rem;
-    margin-bottom: 3rem;
+    .porque-texto p {
+        font-size: 0.95rem;
+    }
+
+    .porque-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .etiqueta {
+        font-size: 11px;
+    }
 }
