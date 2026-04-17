@@ -4,33 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Od. Luciano Coca</title>
+
+    <!-- SEO BÁSICO -->
+    <title>Estética Dental Salta | Implantes y Carillas | Od. Luciano Coca</title>
+    <meta name="description"
+        content="Estética dental en Salta Capital. Implantes dentales, carillas de porcelana y rehabilitación oral. Od. Luciano Coca — Estudio Odontológico. Turno online.">
+    <meta name="keywords"
+        content="estetica dental salta, implantes dentales salta, odontologo salta, carillas dentales salta, blanqueamiento dental salta, luciano coca odontologo">
+    <meta name="author" content="Od. Luciano Coca">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO LOCAL / GEO -->
+    <meta name="geo.region" content="AR-A">
+    <meta name="geo.placename" content="Salta, Argentina">
+
+    <!-- OPEN GRAPH (para compartir en redes sociales) -->
+    <meta property="og:title" content="Estética Dental Salta | Od. Luciano Coca">
+    <meta property="og:description"
+        content="Implantes dentales y estética dental en Salta Capital.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:image" content="./css/img/headerImagen.jpg">
 
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    /****************************************************/
-    /********************* HEADER **********************/
-    <header>
-        <nav class="navbar fixed-top" style="background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+
+    <header id="inicio">
+        <nav class="navbar fixed-top" style="background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"
+            aria-label="Navegación principal">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./css/img/logo.png" alt="Logo" height="40">
+                <a class="navbar-brand" href="#inicio" aria-label="Inicio - Integra Estudio Odontológico">
+                    <img src="./css/img/logo.png" alt="Logo Integra Estudio Odontológico" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel" style="background-color: #1a3c5e;">
                     <div class="offcanvas-header" style="border-bottom: 1px solid rgba(255,255,255,0.15);">
-                        <h5 class="offcanvas-title"
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"
                             style="color: white; font-family: 'Cormorant Garamond', serif; letter-spacing: 3px; text-transform: uppercase;">
                             Menú</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                            aria-label="Cerrar menú"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -52,11 +74,12 @@
                 </div>
             </div>
         </nav>
-        <!-- CARRUSEL -->
+
         <div class="headerContenedor">
             <div class="headerTextos">
-                <h1>INTEGRA Estudio Odontológico</h1>
-                <p>Sonrisas saludables, cuidado personalizado.</p>
+                <!-- H1,keyword principal -->
+                <h1>Estética Dental en Salta</h1>
+                <p>Implantes, carillas</p>
                 <div class="carousel-wrapper">
                     <div id="carouselServicios" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -67,27 +90,27 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="./css/img/card1.jpg" class="d-block w-100" alt="Carillas dentales">
+                                <img src="./css/img/card1.jpg" class="d-block w-100"
+                                    alt="Carillas dentales en Salta - Integra Estudio Odontológico">
                                 <div class="carousel-caption">
-                                    <span class="carousel-num"></span>
                                     <h5>Carillas Dentales</h5>
                                     <p>Transformamos tu sonrisa con laminados de porcelana ultrafinos que replican la
                                         apariencia natural del esmalte.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./css/img/card2.png" class="d-block w-100" alt="Implantes dentales">
+                                <img src="./css/img/card2.png" class="d-block w-100"
+                                    alt="Implantes dentales en Salta - Od. Luciano Coca">
                                 <div class="carousel-caption">
-                                    <span class="carousel-num"></span>
                                     <h5>Implantes Dentales</h5>
                                     <p>Recuperá la función y estética de tus dientes con implantes de titanio de última
-                                        generación, la solución definitiva y duradera.</p>
+                                        generación.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="./css/img/card3.png" class="d-block w-100" alt="Rehabilitación total">
+                                <img src="./css/img/card3.png" class="d-block w-100"
+                                    alt="Rehabilitación oral completa en Salta">
                                 <div class="carousel-caption">
-                                    <span class="carousel-num"></span>
                                     <h5>Rehabilitación Total</h5>
                                     <p>Restauramos integralmente tu boca para que puedas comer, hablar y sonreír con
                                         plena confianza.</p>
@@ -109,44 +132,66 @@
     </header>
 
     <main>
-<!-- SECCIÓN POR QUÉ ELEGIRNOS -->
-    <section class="porque">
-        <div class="porque-grid">
-            <div class="porque-texto">
-                <span class="etiqueta">¿Por qué elegirnos?</span>
-                <h2>Excelencia clínica con calidez humana</h2>
-                <p>En Integra Estudio Odontológico combinamos años de formación especializada con un trato cercano y personalizado. Cada tratamiento es diseñado a medida, porque cada paciente es único.</p>
+        <!-- SECCIÓN POR QUÉ ELEGIRNOS -->
+        <section class="porque" id="porque" aria-labelledby="porque-titulo">
+            <div class="porque-grid">
+                <div class="porque-texto">
+                    <span class="etiqueta">¿Por qué elegirnos?</span>
+                    <h2 id="porque-titulo">Excelencia clínica con calidez humana</h2>
+                    <p>En Integra Estudio Odontológico combinamos años de formación especializada con un trato cercano y
+                        personalizado. Cada tratamiento es diseñado a medida, porque cada paciente es único.</p>
+                </div>
+                <div class="porque-items">
+                    <div class="porque-item">
+                        <div class="porque-icono">✦</div>
+                        <div>
+                            <h4>Tecnología de vanguardia</h4>
+                            <p>Equipamiento digital de última generación para diagnósticos precisos y tratamientos
+                                eficientes.</p>
+                        </div>
+                    </div>
+                    <div class="porque-item">
+                        <div class="porque-icono">✦</div>
+                        <div>
+                            <h4>Atención personalizada</h4>
+                            <p>Planes de tratamiento individualizados, con tiempo y dedicación para cada consulta.</p>
+                        </div>
+                    </div>
+                    <div class="porque-item">
+                        <div class="porque-icono">✦</div>
+                        <div>
+                            <h4>Experiencia comprobada</h4>
+                            <p>Años de trayectoria avalan resultados estéticos y funcionales de excelencia.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="porque-items">
-                <div class="porque-item">
-                    <div class="porque-icono">✦</div>
-                    <div>
-                        <h4>Tecnología de vanguardia</h4>
-                        <p>Equipamiento digital de última generación para diagnósticos precisos y tratamientos eficientes.</p>
-                    </div>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">✦</div>
-                    <div>
-                        <h4>Atención personalizada</h4>
-                        <p>Planes de tratamiento individualizados, con tiempo y dedicación para cada consulta.</p>
-                    </div>
-                </div>
-                <div class="porque-item">
-                    <div class="porque-icono">✦</div>
-                    <div>
-                        <h4>Experiencia comprobada</h4>
-                        <p>Años de trayectoria avalan resultados estéticos y funcionales de excelencia.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
-    </main>
-    <footer>
+
+    <footer id="contacto">
 
     </footer>
+
+    <!-- SCHEMA MARKUP - Datos estructurados para Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Integra Estudio Odontológico",
+        "description": "Estética dental, implantes y rehabilitación oral en Salta Capital",
+        "url": "https://www.integradental.com.ar",
+        "telephone": "+54-387-000-0000",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Salta",
+            "addressRegion": "Salta",
+            "addressCountry": "AR"
+        },
+        "medicalSpecialty": ["Estética Dental", "Implantología"]
+    }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
