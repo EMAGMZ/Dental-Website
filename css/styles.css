@@ -18,7 +18,8 @@ body {
 }
 
 /****************************************************/
-/********************* HEADER **********************/
+/********************* NAV **********************/
+
 .miNav {
     position: fixed;
     top: 0;
@@ -27,7 +28,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     padding: 15px 0;
     z-index: 999;
 }
@@ -38,7 +39,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .miNav a:hover {
@@ -46,14 +47,13 @@ body {
 }
 
 /****************************************************/
-/********************* MAIN **********************/
+/********************* TITULOS **********************/
+
 .titulosContenedor {
     background-color: #faf0df;
-    position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 70px;
+    padding-bottom: 0;
 }
 
 .titutlosTextos {
@@ -64,95 +64,38 @@ body {
     gap: 8px;
     width: 90%;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .titutlosTextos h1 {
-    font-size: 3rem;
+    font-size: 1.8rem; /* mobile */
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #1a3c5e;
 }
 
-.titutlosTextos>h2 {
-    font-size: 2rem;
+.titutlosTextos > h2 {
+    font-size: 1.3rem; /* mobile */
     color: #1a3c5e;
-    margin-top: 2px;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
 }
 
-.titutlosTextos>p {
+.titutlosTextos > p {
     color: #c9a84c;
-    margin-top: 2px;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
-/* CARRUSEL */
-.carousel-wrapper {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto 0;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(26, 60, 94, 0.2);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 10);
-
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    filter: brightness(0.55);
-}
-
-.carousel-caption {
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    text-align: left;
-}
-
-.carousel-caption h5 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-.carousel-caption p {
-    color: #faf0df;
-    font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0.9;
-}
-
-.porque {
-    background-color: var(--azul-oscuro);
-    padding: 50px 20px;
-}
-
-.porque-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.porque-texto {
-    flex: 1;
-}
-
-/* SECCION LUCIANO */
+/****************************************************/
+/********************* IMAGEN LUCIANO **********************/
 
 .imagenLuciano {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 250px; /* mobile */
 }
 
 .imagenLuciano img {
@@ -173,33 +116,74 @@ body {
 
 .imagenLucianoTexto {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 20px;
     right: 20px;
     z-index: 1;
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .imagenLucianoTexto h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem; /* mobile */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .imagenLucianoTexto p {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
 }
 
-/* SECCION POR QUE */
+/****************************************************/
+/********************* CARRUSEL **********************/
+
+.carousel-wrapper {
+    width: 100%;
+    margin: 20px auto 0;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 220px; /* mobile */
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.carousel-caption {
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.carousel-caption h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; /* mobile */
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.carousel-caption p {
+    color: #faf0df;
+    font-size: 0.82rem; /* mobile */
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/****************************************************/
+/********************* PORQUE **********************/
+
 .etiqueta {
     display: inline-block;
-    font-size: 10px;
+    font-size: 0.65rem; /* mobile */
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -209,9 +193,26 @@ body {
     margin-bottom: 16px;
 }
 
+.porque {
+    background-color: var(--azul-oscuro);
+    padding: 40px 20px; /* mobile */
+}
+
+.porque-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* mobile */
+    gap: 30px;
+}
+
+.porque-texto {
+    flex: 1;
+}
+
 .porque-texto h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.7rem;
+    font-size: 1.5rem; /* mobile */
     color: var(--blanco);
     margin-bottom: 16px;
     line-height: 1.2;
@@ -220,22 +221,22 @@ body {
 .porque-texto p {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .porque-items {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
 }
 
 .porque-item {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     align-items: flex-start;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 28px;
+    padding-bottom: 24px;
 }
 
 .porque-item:last-child {
@@ -245,27 +246,130 @@ body {
 
 .porque-icono {
     color: var(--dorado);
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 2px;
     flex-shrink: 0;
 }
 
 .porque-item h4 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
+    font-size: 0.95rem; /* mobile */
     color: var(--blanco);
     margin-bottom: 6px;
     letter-spacing: 0.5px;
 }
 
 .porque-item p {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin: 0;
 }
 
+/****************************************************/
+/********************* FOOTER **********************/
+
+footer {
+    background-color: #111e2b;
+    color: var(--blanco);
+    padding: 30px 20px 0;
+}
+
+.footerContenido {
+    display: flex;
+    flex-direction: column; /* mobile */
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.footerDatos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerDatos p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footerDatos a {
+    color: var(--dorado);
+    text-decoration: none;
+}
+
+.footerDatos a:hover {
+    text-decoration: underline;
+}
+
+.footerMapa {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.footerCopy {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 0;
+    text-align: center;
+}
+
+.footerCopy p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/****************************************************/
+/********************* DESKTOP **********************/
+
 @media (min-width: 768px) {
+    .miNav a {
+        font-size: 1.1rem;
+        gap: 40px;
+    }
+
+    .titutlosTextos h1 {
+        font-size: 3rem;
+    }
+
+    .titutlosTextos > h2 {
+        font-size: 2rem;
+    }
+
+    .imagenLuciano {
+        height: 600px;
+    }
+
+    .imagenLucianoTexto {
+        bottom: 40px;
+        left: 50px;
+        right: 50px;
+    }
+
+    .imagenLucianoTexto h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-wrapper {
+        max-width: 800px;
+        padding: 40px 20px;
+    }
+
+    .carousel-inner img {
+        height: 350px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
     .porque {
         padding: 80px 40px;
     }
@@ -280,15 +384,22 @@ body {
         font-size: 2.2rem;
     }
 
-    .porque-texto p {
-        font-size: 0.95rem;
-    }
-
     .porque-item h4 {
         font-size: 1.1rem;
     }
 
     .etiqueta {
-        font-size: 11px;
+        font-size: 0.75rem;
+    }
+
+    .footerContenido {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footerMapa {
+        width: 300px;
+        flex-shrink: 0;
     }
 }
