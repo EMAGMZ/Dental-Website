@@ -47,7 +47,49 @@ body {
 }
 
 /****************************************************/
-/********************* TITULOS **********************/
+/********************* MAIN **********************/
+
+/* ICONO WHATSAPP */
+.whatsapp-float {
+    opacity: 0.;
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: right;
+
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 15%;
+    object-fit: contain;
+}
+
+/** TITULOS **/
+
+.titulosContenedor {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .titulosContenedor {
     background-color: #faf0df;
@@ -78,7 +120,6 @@ body {
 
 .titutlosTextos>h2 {
     font-size: 1.3rem;
-    /* mobile */
     color: #1a3c5e;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
@@ -90,35 +131,62 @@ body {
     text-transform: uppercase;
     font-size: 0.85rem;
 }
-/* ICONO WHATSAPP */
-.whatsapp-float {
-    opacity: 0.;
-    position: fixed;
-    right: 15px;
+
+/** CARRUSEL **/
+.carousel-wrapper {
+    width: 100%;
+    margin: 20px auto 0;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.carousel-caption {
     top: 50%;
-    transform: translateY(-50%);
-
-    display: flex;
-    justify-content: right;
-    align-items:;
-
-    z-index: 1000;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
 }
 
-.whatsapp-float img {
-    width: 15%;
-    object-fit: contain;
+.carousel-caption h5 {
+    white-space: nowrap;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
 }
 
+.carousel-caption p {
+    color: #faf0df;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
 
-
-
-
-/****************************************************/
-/********************* IMAGEN LUCIANO **********************/
-
+/** IMAGEN LUCIANO **/
 .imagenLuciano {
-    borderto: solid 2px #1a3c5e;;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenLuciano img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imagenLuciano {
+    border: solid 2px #1a3c5e;
+    ;
     position: relative;
     width: 100%;
     height: 250px;
@@ -165,48 +233,7 @@ body {
     color: rgba(255, 255, 255, 0.85);
 }
 
-/****************************************************/
-/********************* CARRUSEL **********************/
-
-.carousel-wrapper {
-    width: 100%;
-    margin: 20px auto 0;
-    overflow: hidden;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    filter: brightness(0.55);
-}
-
-.carousel-caption {
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.carousel-caption h5 {
-    white-space: nowrap; 
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-}
-
-.carousel-caption p {
-    color: #faf0df;
-    font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0.9;
-}
-
-/****************************************************/
-/********************* PORQUE **********************/
-
+/** PORQUE **/
 .etiqueta {
     display: inline-block;
     font-size: 0.65rem;
@@ -352,6 +379,7 @@ footer {
 /********************* DESKTOP **********************/
 
 @media (min-width: 600px) {
+
     /* NAVBAR */
     .miNav a {
         font-size: 1.1rem;
@@ -362,11 +390,12 @@ footer {
         font-size: 4rem;
     }
 
-    .titutlosTextos > h2 {
+    .titutlosTextos>h2 {
         font-size: 3rem;
     }
-/* CARRUSEL */
-.carousel-wrapper {
+
+    /* CARRUSEL */
+    .carousel-wrapper {
         border: 2px solid var(--crema);
         border-radius: 8px;
     }
@@ -403,7 +432,7 @@ footer {
         font-size: 1.6rem;
     }
 
-/* SECCION POR QUE */
+    /* SECCION POR QUE */
     .porque {
         padding: 80px 40px;
     }
