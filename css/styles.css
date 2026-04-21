@@ -183,15 +183,15 @@ body {
 }
 
 .carousel-caption {
-    bottom: 15px;
     left: 15px;
     right: 15px;
     text-align: left;
 }
 
 .carousel-caption h5 {
+    white-space: nowrap; 
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 1px;
     margin-bottom: 4px;
     text-transform: uppercase;
@@ -199,7 +199,7 @@ body {
 
 .carousel-caption p {
     color: #faf0df;
-    font-size: 0.82rem;
+    font-size: 1rem;
     line-height: 1.5;
     opacity: 0.9;
 }
@@ -352,19 +352,39 @@ footer {
 /********************* DESKTOP **********************/
 
 @media (min-width: 600px) {
+    /* NAVBAR */
     .miNav a {
         font-size: 1.1rem;
         gap: 40px;
     }
 
     .titutlosTextos h1 {
+        font-size: 4rem;
+    }
+
+    .titutlosTextos > h2 {
+        font-size: 3rem;
+    }
+/* CARRUSEL */
+.carousel-wrapper {
+        border: 2px solid var(--crema);
+        border-radius: 8px;
+    }
+
+    .carousel-inner img {
+        height: 350px;
+        object-position: center 30%;
+    }
+
+    .carousel-caption h5 {
         font-size: 3rem;
     }
 
-    .titutlosTextos>h2 {
+    .carousel-caption p {
         font-size: 2rem;
     }
 
+    /* IMAGEN MAIN */
     .imagenLuciano {
         height: 600px;
     }
@@ -379,60 +399,45 @@ footer {
         font-size: 2rem;
     }
 
-    .carousel-wrapper {
-        border: 2px solid var(--crema);
+    .imagenLucianoTexto p {
+        font-size: 1.6rem;
+    }
+
+/* SECCION POR QUE */
+    .porque {
+        padding: 80px 40px;
+    }
+
+    .porque-grid {
+        flex-direction: row;
+        gap: 60px;
+        align-items: flex-start;
+    }
+
+    .porque-item p {
+        font-size: 1rem;
+    }
+
+
+    .porque-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .etiqueta {
+        font-size: 2rem;
+    }
+
+    /* FOTER */
+    .footerContenido {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footerMapa iframe {
+        width: 100%;
+        height: 150px;
         border-radius: 8px;
+        overflow: hidden;
     }
-
-    .carousel-inner img {
-        object-position: center 30%;
-    }
-
-
-.carousel-inner img {
-    height: 350px;
-}
-
-.carousel-caption h5 {
-    font-size: 1.5rem;
-}
-
-.carousel-caption p {
-    font-size: 1rem;
-}
-
-.porque {
-    padding: 80px 40px;
-}
-
-.porque-grid {
-    flex-direction: row;
-    gap: 60px;
-    align-items: flex-start;
-}
-
-.porque-texto h2 {
-    font-size: 2.2rem;
-}
-
-.porque-item h4 {
-    font-size: 1.1rem;
-}
-
-.etiqueta {
-    font-size: 0.75rem;
-}
-
-.footerContenido {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footerMapa iframe {
-    width: 100%;
-    height: 150px;
-    border-radius: 8px;
-    overflow: hidden;
-}
 }
