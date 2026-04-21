@@ -8,6 +8,10 @@ body {
     background-color: #ffffff;
 }
 
+main {
+    background-color: #faf0df;
+}
+
 :root {
     --azul-oscuro: #1a3c5e;
     --azul-medio: #2a5a8c;
@@ -51,21 +55,19 @@ body {
 
 /* ICONO WHATSAPP */
 .whatsapp-float {
-    opacity: 0.;
     position: fixed;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-
-    display: flex;
-    justify-content: right;
-
     z-index: 1000;
+    width: fit-content;
 }
 
 .whatsapp-float img {
-    width: 15%;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
+    display: block;
 }
 
 /** TITULOS **/
@@ -111,7 +113,6 @@ body {
 
 .titutlosTextos h1 {
     font-size: 1.8rem;
-    /* mobile */
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -135,16 +136,17 @@ body {
 /** CARRUSEL **/
 .carousel-wrapper {
     width: 100%;
-    margin: 20px auto 0;
+    margin: 20px;
     overflow: hidden;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .carousel-inner img {
+    padding: 5px;
+    border-radius: 10px;
     width: 100%;
     height: 220px;
     object-fit: cover;
-    filter: brightness(0.55);
 }
 
 .carousel-caption {
@@ -170,7 +172,7 @@ body {
 
 .carousel-caption p {
     color: #faf0df;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.5;
     opacity: 0.9;
 }
@@ -178,14 +180,14 @@ body {
 /** IMAGEN LUCIANO **/
 
 .imagenLuciano {
-    border: solid 2px #1a3c5e;
-    ;
+    background-color: #faf0df;
+    padding: 4px;
     position: relative;
-    width: 100%;
     height: 250px;
 }
 
 .imagenLuciano img {
+    border-radius: 3px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -254,10 +256,19 @@ body {
     line-height: 1.2;
 }
 
-.porque-texto p {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.7;
-    font-size: 0.88rem;
+.porque-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--blanco);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.porque-item p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .porque-items {
@@ -296,7 +307,7 @@ body {
 }
 
 .porque-item p {
-    font-size: 0.82rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin: 0;
@@ -313,11 +324,13 @@ footer {
 
 .footerContenido {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     max-width: 1100px;
     margin: 0 auto;
     padding-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footerDatos {
@@ -341,7 +354,7 @@ footer {
 }
 
 .footerMapa iframe {
-    width: 120px;
+    width: 100%;
     height: 150px;
     border-radius: 8px;
     overflow: hidden;
@@ -399,6 +412,7 @@ footer {
 
     /* IMAGEN MAIN */
     .imagenLuciano {
+        padding: 10px;
         border-radius: 30px;
         height: 600px;
     }
@@ -433,29 +447,13 @@ footer {
     }
 
     .porque-item p {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
-
-    .porque-item h4 {
-        font-size: 1.1rem;
-    }
-
-    .etiqueta {
-        font-size: 2rem;
-    }
-
-    /* FOTER */
-    .footerContenido {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .footerMapa iframe {
-        width: 100%;
-        height: 150px;
-        border-radius: 8px;
-        overflow: hidden;
+    .porque-texto h2 {
+        font-size: 2.2rem;
     }
 }
+
+/****************************************************/
+/********************* FOTER **********************/
