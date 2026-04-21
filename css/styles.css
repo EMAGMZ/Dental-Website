@@ -118,6 +118,7 @@ body {
 /********************* IMAGEN LUCIANO **********************/
 
 .imagenLuciano {
+    borderto: solid 2px #1a3c5e;;
     position: relative;
     width: 100%;
     height: 250px;
