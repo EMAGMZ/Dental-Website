@@ -158,6 +158,8 @@ body {
 }
 
 .carousel-caption h5 {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
     white-space: nowrap;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
@@ -174,16 +176,7 @@ body {
 }
 
 /** IMAGEN LUCIANO **/
-.imagenLuciano {
-    overflow: hidden;
-    position: relative;
-}
 
-.imagenLuciano img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 .imagenLuciano {
     border: solid 2px #1a3c5e;
     ;
@@ -196,16 +189,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.imagenLuciano::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26, 60, 94, 0.65);
 }
 
 .imagenLucianoTexto {
@@ -401,6 +384,7 @@ footer {
     }
 
     .carousel-inner img {
+        border-radius: 30px;
         height: 350px;
         object-position: center 30%;
     }
@@ -415,7 +399,12 @@ footer {
 
     /* IMAGEN MAIN */
     .imagenLuciano {
+        border-radius: 30px;
         height: 600px;
+    }
+
+    .imagenLuciano img {
+        border-radius: 30px;
     }
 
     .imagenLucianoTexto {
