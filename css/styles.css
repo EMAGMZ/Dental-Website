@@ -252,14 +252,6 @@ main {
     line-height: 1.2;
 }
 
-.porque-item h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    color: var(--blanco);
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-}
-
 .porque-item p {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.6);
