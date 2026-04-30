@@ -1,0 +1,138 @@
+@use 'variables' as v;
+
+.turnos-seccion {
+    @extend %seccion-base;
+}
+
+.turnos-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1.5fr;
+        align-items: start;
+    }
+}
+
+.turnos-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.8rem;
+        color: var(--azul-oscuro);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 0.95rem;
+        color: var(--gris-texto);
+        line-height: 1.8;
+    }
+}
+
+.turnos-pasos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1rem;
+        color: var(--azul-oscuro);
+    }
+}
+
+.turnos-paso-numero {
+    font-size: 1.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--dorado);
+    font-weight: 600;
+    min-width: 30px;
+}
+
+.turnos-form {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    padding: 36px 28px;
+    box-shadow: 0 4px 20px rgba(26, 60, 94, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.turnos-form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &--full {
+        grid-column: 1 / -1;
+    }
+
+    label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--azul-oscuro);
+        font-family: 'Cormorant Garamond', serif;
+
+        span {
+            color: var(--gris-texto);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.75rem;
+        }
+    }
+
+    input,
+    select,
+    textarea {
+        border: 1px solid rgba(26, 60, 94, 0.2);
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 0.9rem;
+        color: var(--azul-oscuro);
+        background-color: #faf0df;
+        transition: border-color 0.3s ease;
+        font-family: inherit;
+
+        &:focus {
+            outline: none;
+            border-color: var(--dorado);
+        }
+
+        &::placeholder {
+            color: rgba(74, 85, 104, 0.5);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    button {
+        width: 100%;
+        cursor: pointer;
+        border: none;
+    }
+}
+
+.btn-sobre-mi {
+    @include v.boton();
+}

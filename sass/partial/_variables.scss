@@ -6,3 +6,53 @@
     --blanco: #ffffff;
     --gris-texto: #4a5568;
 }
+
+// **MIXINS **//
+
+@mixin fuente-elegante($size: 1rem, $transform: uppercase, $spacing: 1px) {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: $size;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+}
+
+@mixin flex-centro($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin boton($bg: #1a3c5e, $color: #ffffff) {
+    display: inline-block;
+    background-color: $bg;
+    color: $color;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #c9a84c;
+        color: #ffffff;
+    }
+}
+
+@mixin tarjeta($radio: 12px) {
+    background-color: var(--blanco);
+    border-radius: $radio;
+    box-shadow: 0 4px 20px rgba(26, 60, 94, 0.1);
+}
+
+
+// ** EXTENDS **//
+
+%seccion-base {
+    background-color: #faf0df;
+    padding: 60px 20px;
+}
