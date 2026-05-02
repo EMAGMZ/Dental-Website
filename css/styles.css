@@ -453,7 +453,7 @@ footer {
   color: var(--azul-oscuro);
 }
 .sobre-mi-texto p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--gris-texto);
   line-height: 1.8;
 }
