@@ -233,6 +233,9 @@ main {
     align-items: start;
     gap: 30px;
   }
+  .turnos-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .carousel-wrapper {
     max-width: 99%;
     margin: 0 auto;
@@ -521,7 +524,7 @@ footer {
 }
 .formacion .formacion-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 .formacion .formacion-item {
@@ -541,7 +544,7 @@ footer {
 }
 @media (min-width: 600px) {
   .formacion .formacion-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -748,7 +751,7 @@ footer {
   padding: 36px 28px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
