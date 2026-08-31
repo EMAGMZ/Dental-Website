@@ -298,8 +298,9 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  background-color: white !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--fondo-oscuro-2) !important;
+  border-bottom: 1px solid rgba(217, 140, 74, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   padding: 15px 20px;
   z-index: 999;
 }
@@ -308,14 +309,14 @@ main {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--fondo-oscuro) !important;
+  color: var(--texto-claro) !important;
 }
 .miNav .nav-link {
   font-family: "Cormorant Garamond", serif;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--fondo-oscuro) !important;
+  color: var(--texto-claro) !important;
   padding: 8px 16px;
   transition: color 0.3s ease;
 }
@@ -323,13 +324,13 @@ main {
   color: var(--dorado) !important;
 }
 .miNav .navbar-toggler {
-  border-color: var(--fondo-oscuro);
+  border-color: var(--dorado);
 }
 .miNav .navbar-toggler:focus {
   box-shadow: none;
 }
 .miNav .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231a1410' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5f0ea' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .titulosContenedor {
