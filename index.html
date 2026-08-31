@@ -99,6 +99,80 @@
             </div>
         </section>
 
+         <!-- SECCIÓN: AGENDAR TURNO -->
+        <section class="turnos-seccion" id="agendar" aria-labelledby="agendar-titulo">
+            <div class="turnos-container">
+
+                <div class="turnos-info">
+                    <span class="etiqueta">Atención personalizada</span>
+                    <h2 id="agendar-titulo">¿Cómo funciona?</h2>
+                    <p>Completá el formulario con tus datos y el motivo de tu consulta. Nos comunicaremos con vos a la
+                        brevedad para confirmar día y horario.</p>
+                    <ul class="turnos-pasos">
+                        <li>
+                            <span class="turnos-paso-numero">01</span>
+                            <span>Completá el formulario</span>
+                        </li>
+                        <li>
+                            <span class="turnos-paso-numero">02</span>
+                            <span>Te contactamos para confirmar</span>
+                        </li>
+                        <li>
+                            <span class="turnos-paso-numero">03</span>
+                            <span>Asistí a tu consulta</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="turnos-form" action="#" method="POST" novalidate>
+
+                    <div class="turnos-form-grupo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
+                            autocomplete="given-name" />
+                    </div>
+
+                    <div class="turnos-form-grupo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required
+                            autocomplete="family-name" />
+                    </div>
+
+                    <div class="turnos-form-grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 387 000-0000" required
+                            autocomplete="tel" />
+                    </div>
+
+                    <div class="turnos-form-grupo turnos-form-grupo--full">
+                        <label for="motivo">Motivo de la consulta</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="" disabled selected>Seleccioná una opción</option>
+                            <option value="rehabilitacion">Rehabilitación oral</option>
+                            <option value="ortodoncia">Ortodoncia</option>
+                            <option value="implantes">Implantes dentales</option>
+                            <option value="blanqueamiento">Blanqueamiento dental</option>
+                            <option value="limpieza">Limpieza y control</option>
+                            <option value="urgencia">Urgencia odontológica</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="turnos-form-grupo turnos-form-grupo--full">
+                        <label for="mensaje">Información adicional <span>(opcional)</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            placeholder="Contanos más sobre tu consulta..."></textarea>
+                    </div>
+
+                    <div class="turnos-form-grupo turnos-form-grupo--full">
+                        <button type="submit" class="btn-sobre-mi">Solicitar turno</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+        
         <!-- SECCIÓN: EXPLICACIÓN PASO A PASO -->
         <section class="paso-a-paso" id="paso-a-paso" aria-labelledby="paso-a-paso-titulo">
             <div class="paso-a-paso-container">
@@ -118,6 +192,7 @@
 
         <!-- SECCIÓN: TRATAMIENTOS -->
         <section id="tratamientos" aria-label="Tratamientos">
+            <div class="tratamientos-grid">
             <!-- CARRUSEL -->
             <div class="carousel-wrapper">
                 <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
@@ -126,6 +201,7 @@
                             <img src="./css/img/carillasDentales.png" class="d-block w-100"
                                 alt="Carillas dentales en Salta">
                             <div class="carousel-caption">
+                                <span class="etiqueta">Tratamientos</span>
                                 <h5>Carillas Dentales</h5>
                                 <p>Transformá tu sonrisa con diseños digitales y planificación 3D. Con tecnología de
                                     altos estándares que reduce errores y garantiza resultados naturales.</p>
@@ -135,6 +211,7 @@
                             <img src="./css/img/implantesDentales.png" class="d-block w-100"
                                 alt="Implantes dentales en Salta">
                             <div class="carousel-caption">
+                                <span class="etiqueta">Tratamientos</span>
                                 <h5>Implantes Dentales</h5>
                                 <p>Soluciones personalizadas diseñadas para lograr resultados duraderos. Recuperá
                                     funcionalidad y estética con precisión y seguridad.</p>
@@ -144,6 +221,7 @@
                             <img src="./css/img/reha.png" class="d-block w-100"
                                 alt="Rehabilitación oral completa en Salta">
                             <div class="carousel-caption">
+                                <span class="etiqueta">Tratamientos</span>
                                 <h5>Rehabilitación Total</h5>
                                 <p>Volvé a comer y sonreír con confianza. Restauramos la función y estética dental con
                                     un enfoque altamente estético.</p>
@@ -152,6 +230,7 @@
                         <div class="carousel-item">
                             <img src="./css/img/blanque.png" class="d-block w-100" alt="Blanqueamiento dental Salta">
                             <div class="carousel-caption">
+                                <span class="etiqueta">Tratamientos</span>
                                 <h5>Blanqueamiento Dental</h5>
                                 <p>Tratamientos seguros y efectivos para una sonrisa más blanca y luminosa en poco
                                     tiempo.</p>
@@ -180,6 +259,7 @@
                     <p>Trabajamos con tecnología de vanguardia para garantizar diagnósticos precisos y tratamientos
                         eficientes lorem.</p>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -275,79 +355,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: AGENDAR TURNO -->
-        <section class="turnos-seccion" id="agendar" aria-labelledby="agendar-titulo">
-            <div class="turnos-container">
-
-                <div class="turnos-info">
-                    <span class="etiqueta">Atención personalizada</span>
-                    <h2 id="agendar-titulo">¿Cómo funciona?</h2>
-                    <p>Completá el formulario con tus datos y el motivo de tu consulta. Nos comunicaremos con vos a la
-                        brevedad para confirmar día y horario.</p>
-                    <ul class="turnos-pasos">
-                        <li>
-                            <span class="turnos-paso-numero">01</span>
-                            <span>Completá el formulario</span>
-                        </li>
-                        <li>
-                            <span class="turnos-paso-numero">02</span>
-                            <span>Te contactamos para confirmar</span>
-                        </li>
-                        <li>
-                            <span class="turnos-paso-numero">03</span>
-                            <span>Asistí a tu consulta</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <form class="turnos-form" action="#" method="POST" novalidate>
-
-                    <div class="turnos-form-grupo">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
-                            autocomplete="given-name" />
-                    </div>
-
-                    <div class="turnos-form-grupo">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required
-                            autocomplete="family-name" />
-                    </div>
-
-                    <div class="turnos-form-grupo">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 387 000-0000" required
-                            autocomplete="tel" />
-                    </div>
-
-                    <div class="turnos-form-grupo turnos-form-grupo--full">
-                        <label for="motivo">Motivo de la consulta</label>
-                        <select id="motivo" name="motivo" required>
-                            <option value="" disabled selected>Seleccioná una opción</option>
-                            <option value="rehabilitacion">Rehabilitación oral</option>
-                            <option value="ortodoncia">Ortodoncia</option>
-                            <option value="implantes">Implantes dentales</option>
-                            <option value="blanqueamiento">Blanqueamiento dental</option>
-                            <option value="limpieza">Limpieza y control</option>
-                            <option value="urgencia">Urgencia odontológica</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-
-                    <div class="turnos-form-grupo turnos-form-grupo--full">
-                        <label for="mensaje">Información adicional <span>(opcional)</span></label>
-                        <textarea id="mensaje" name="mensaje" rows="4"
-                            placeholder="Contanos más sobre tu consulta..."></textarea>
-                    </div>
-
-                    <div class="turnos-form-grupo turnos-form-grupo--full">
-                        <button type="submit" class="btn-sobre-mi">Solicitar turno</button>
-                    </div>
-
-                </form>
-
-            </div>
-        </section>
+       
 
         <!-- SECCIÓN: FAQ -->
         <section class="faq-seccion" id="faq" aria-labelledby="faq-titulo">
