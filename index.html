@@ -41,19 +41,25 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link" aria-current="page" href="#hero">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="pages/sobreMi.html">Sobre mí</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/casos.html">Casos</a>
+                                <a class="nav-link" href="#porque-escucharme">Por qué escucharme</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                                <a class="nav-link" href="#tratamientos">Tratamientos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/turnos.html">Turnos</a>
+                                <a class="nav-link" href="#casos-exito">Casos de éxito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#agendar">Agendar turno</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#faq">FAQ</a>
                             </li>
                         </ul>
                     </div>
@@ -67,17 +73,51 @@
             <img src="./css/img/whatsapp.png" alt="WhatsApp">
         </a>
 
-        <!-- H1 -->
-        <div class="titulosContenedor">
+        <!-- SECCIÓN: HERO -->
+        <section class="titulosContenedor" id="hero" aria-labelledby="hero-titulo">
             <div class="titutlosTextos">
-                <h1>Estética Dental en Salta</h1>
+                <h1 id="hero-titulo">[Título llamativo pendiente de copy]</h1>
                 <h2>Odontólogo Luciano Coca</h2>
                 <p>recupera el confort y la seguridad de una sonrisa verdadera</p>
                 <a href="https://wa.me/543872243511" target="_blank" class="btn btn-primary">
                     Contactar por WhatsApp
                 </a>
             </div>
+        </section>
 
+        <!-- SECCIÓN: POR QUÉ ESCUCHARME (prueba social 1) -->
+        <section class="porque" id="porque-escucharme" aria-labelledby="porque-escucharme-titulo">
+            <div class="porque-grid">
+                <div class="porque-texto">
+                    <span class="etiqueta">Prueba social</span>
+                    <h2 id="porque-escucharme-titulo">¿Por qué escucharme?</h2>
+                </div>
+                <div class="porque-items">
+                    <!-- VIDEO PENDIENTE: acá va el video de presentación del profesional -->
+                    <div class="placeholder-video">VIDEO PENDIENTE</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: EXPLICACIÓN PASO A PASO -->
+        <section class="paso-a-paso" id="paso-a-paso" aria-labelledby="paso-a-paso-titulo">
+            <div class="paso-a-paso-container">
+                <div class="paso-a-paso-texto">
+                    <span class="etiqueta">Cómo trabajamos</span>
+                    <h2 id="paso-a-paso-titulo">Explicación paso a paso</h2>
+                    <p>Un recorrido simple y claro por cada etapa del tratamiento, desde la primera consulta hasta el
+                        resultado final.</p>
+                </div>
+
+                <!-- VIDEO PENDIENTE: acá va el video explicativo del proceso paso a paso -->
+                <div class="placeholder-video">VIDEO PENDIENTE</div>
+
+                <!-- ANIMACIÓN/CONEXIÓN PENDIENTE: acá va una animación o gráfico simple que conecte visualmente los pasos del tratamiento -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN: TRATAMIENTOS -->
+        <section id="tratamientos" aria-label="Tratamientos">
             <!-- CARRUSEL -->
             <div class="carousel-wrapper">
                 <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
@@ -131,49 +171,275 @@
                 </div>
             </div>
 
-        </div>
-
-        <!-- IMAGEN MAIN -->
-        <div class="imagenLuciano">
-            <img src="./css/img/mainImg.jpg" alt="Centro estetico">
-            <div class="imagenLucianoTexto">
-                <span class="etiqueta">Innovación</span>
-                <h2>Equipamiento de última generación</h2>
-                <p>Trabajamos con tecnología de vanguardia para garantizar diagnósticos precisos y tratamientos
-                    eficientes lorem.</p>
-            </div>
-        </div>
-        <!-- SECCION POR QUE -->
-        <section class="porque" id="porque" aria-labelledby="porque-titulo">
-            <div class="porque-grid">
-                <div class="porque-texto">
-                    <span class="etiqueta">¿Por qué elegirnos?</span>
-                    <h2 id="porque-titulo">Excelencia clínica con calidez humana</h2>
+            <!-- IMAGEN MAIN -->
+            <div class="imagenLuciano">
+                <img src="./css/img/mainImg.jpg" alt="Centro estetico">
+                <div class="imagenLucianoTexto">
+                    <span class="etiqueta">Innovación</span>
+                    <h2>Equipamiento de última generación</h2>
+                    <p>Trabajamos con tecnología de vanguardia para garantizar diagnósticos precisos y tratamientos
+                        eficientes lorem.</p>
                 </div>
-                <div class="porque-items">
-                    <div class="porque-item">
-                        <div class="porque-icono">✦</div>
-                        <div>
-                            <h4>Tecnología de vanguardia</h4>
-                            <p>Equipamiento digital de última generación para diagnósticos precisos y tratamientos
-                                eficientes.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CASOS DE ÉXITO (prueba social 2) -->
+        <section class="casos-seccion" id="casos-exito" aria-labelledby="casos-exito-titulo">
+            <div class="casos-container">
+
+                <div class="seccion-intro">
+                    <span class="etiqueta">Prueba social</span>
+                    <h2 id="casos-exito-titulo">Casos de éxito</h2>
+                    <p>Rehabilitación oral — Estética dental</p>
+                </div>
+
+                <div class="casos-grid">
+
+                    <article class="caso-card">
+                        <div class="caso-img">
+                            <img src="./css/img/rehabOral.png" alt="Caso de rehabilitación oral completa" />
+                            <span class="caso-etiqueta">Rehabilitación oral</span>
+                        </div>
+                        <div class="caso-texto">
+                            <h3>Rehabilitación oral completa</h3>
+                            <p>Restauración funcional y estética de toda la dentición mediante coronas y carillas.</p>
+                            <a href="#agendar" class="caso-link">Consultar tratamiento</a>
+                        </div>
+                    </article>
+
+                    <article class="caso-card">
+                        <div class="caso-img">
+                            <img src="./css/img/disSonr.png" alt="Caso de diseño de sonrisa con carillas" />
+                            <span class="caso-etiqueta">Diseño de sonrisa</span>
+                        </div>
+                        <div class="caso-texto">
+                            <h3>Diseño de sonrisa</h3>
+                            <p>Transformación estética mediante carillas de porcelana para una sonrisa natural y
+                                armoniosa.</p>
+                            <a href="#agendar" class="caso-link">Consultar tratamiento</a>
+                        </div>
+                    </article>
+
+                    <article class="caso-card">
+                        <div class="caso-img">
+                            <img src="./css/img/implDent.png" alt="Caso de implantes dentales" />
+                            <span class="caso-etiqueta">Implantes</span>
+                        </div>
+                        <div class="caso-texto">
+                            <h3>Implantes dentales</h3>
+                            <p>Reemplazo de piezas perdidas con implantes de titanio para recuperar función y
+                                estética.
+                            </p>
+                            <a href="#agendar" class="caso-link">Consultar tratamiento</a>
+                        </div>
+                    </article>
+
+                    <article class="caso-card">
+                        <div class="caso-img">
+                            <img src="./css/img/blanqDent.png" alt="Caso de blanqueamiento dental" />
+                            <span class="caso-etiqueta">Blanqueamiento</span>
+                        </div>
+                        <div class="caso-texto">
+                            <h3>Blanqueamiento dental</h3>
+                            <p>Aclaramiento profesional para recuperar la luminosidad natural de los dientes.</p>
+                            <a href="#agendar" class="caso-link">Consultar tratamiento</a>
+                        </div>
+                    </article>
+
+                    <article class="caso-card">
+                        <div class="caso-img">
+                            <img src="./css/img/ortodonc.jpg" alt="Caso de ortodoncia invisible" />
+                            <span class="caso-etiqueta">Ortodoncia</span>
+                        </div>
+                        <div class="caso-texto">
+                            <h3>Ortodoncia invisible</h3>
+                            <p>Corrección de la alineación dental con alineadores transparentes y cómodos.</p>
+                            <a href="#agendar" class="caso-link">Consultar tratamiento</a>
+                        </div>
+                    </article>
+
+                    <article class="caso-card">
+                        <div class="caso-img">
+                            <img src="./css/img/protDent.jpg" alt="Caso de prótesis dental removible" />
+                            <span class="caso-etiqueta">Prótesis</span>
+                        </div>
+                        <div class="caso-texto">
+                            <h3>Prótesis dental</h3>
+                            <p>Soluciones removibles y fijas para recuperar la funcionalidad y estética completa.</p>
+                            <a href="#agendar" class="caso-link">Consultar tratamiento</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: AGENDAR TURNO -->
+        <section class="turnos-seccion" id="agendar" aria-labelledby="agendar-titulo">
+            <div class="turnos-container">
+
+                <div class="turnos-info">
+                    <span class="etiqueta">Atención personalizada</span>
+                    <h2 id="agendar-titulo">¿Cómo funciona?</h2>
+                    <p>Completá el formulario con tus datos y el motivo de tu consulta. Nos comunicaremos con vos a la
+                        brevedad para confirmar día y horario.</p>
+                    <ul class="turnos-pasos">
+                        <li>
+                            <span class="turnos-paso-numero">01</span>
+                            <span>Completá el formulario</span>
+                        </li>
+                        <li>
+                            <span class="turnos-paso-numero">02</span>
+                            <span>Te contactamos para confirmar</span>
+                        </li>
+                        <li>
+                            <span class="turnos-paso-numero">03</span>
+                            <span>Asistí a tu consulta</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="turnos-form" action="#" method="POST" novalidate>
+
+                    <div class="turnos-form-grupo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
+                            autocomplete="given-name" />
+                    </div>
+
+                    <div class="turnos-form-grupo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required
+                            autocomplete="family-name" />
+                    </div>
+
+                    <div class="turnos-form-grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 387 000-0000" required
+                            autocomplete="tel" />
+                    </div>
+
+                    <div class="turnos-form-grupo turnos-form-grupo--full">
+                        <label for="motivo">Motivo de la consulta</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="" disabled selected>Seleccioná una opción</option>
+                            <option value="rehabilitacion">Rehabilitación oral</option>
+                            <option value="ortodoncia">Ortodoncia</option>
+                            <option value="implantes">Implantes dentales</option>
+                            <option value="blanqueamiento">Blanqueamiento dental</option>
+                            <option value="limpieza">Limpieza y control</option>
+                            <option value="urgencia">Urgencia odontológica</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="turnos-form-grupo turnos-form-grupo--full">
+                        <label for="mensaje">Información adicional <span>(opcional)</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            placeholder="Contanos más sobre tu consulta..."></textarea>
+                    </div>
+
+                    <div class="turnos-form-grupo turnos-form-grupo--full">
+                        <button type="submit" class="btn-sobre-mi">Solicitar turno</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: FAQ -->
+        <section class="faq-seccion" id="faq" aria-labelledby="faq-titulo">
+            <div class="faq-container">
+
+                <div class="seccion-intro">
+                    <span class="etiqueta">Preguntas frecuentes</span>
+                    <h2 id="faq-titulo">Resolvé tus dudas</h2>
+                </div>
+
+                <div class="accordion" id="faqAccordion">
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqEncabezado1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqColapso1" aria-expanded="true" aria-controls="faqColapso1">
+                                ¿Cada cuánto tiempo debo hacerme un control odontológico?
+                            </button>
+                        </h3>
+                        <div id="faqColapso1" class="accordion-collapse collapse show"
+                            aria-labelledby="faqEncabezado1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pregunta frecuente de ejemplo — respuesta pendiente de copy definitivo. Lo
+                                recomendable suele ser un control cada 6 meses.
+                            </div>
                         </div>
                     </div>
 
-                    <div class="porque-item">
-                        <div class="porque-icono">✦</div>
-                        <div>
-                            <h4>Atención personalizada</h4>
-                            <p>Planes de tratamiento individualizados, con tiempo y dedicación para cada consulta.</p>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqEncabezado2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqColapso2" aria-expanded="false" aria-controls="faqColapso2">
+                                ¿El tratamiento con implantes dentales duele?
+                            </button>
+                        </h3>
+                        <div id="faqColapso2" class="accordion-collapse collapse" aria-labelledby="faqEncabezado2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pregunta frecuente de ejemplo — respuesta pendiente de copy definitivo. El
+                                procedimiento se realiza con anestesia local y molestias mínimas.
+                            </div>
                         </div>
                     </div>
-                    <div class="porque-item">
-                        <div class="porque-icono">✦</div>
-                        <div>
-                            <h4>Experiencia comprobada</h4>
-                            <p>Años de trayectoria avalan resultados estéticos y funcionales de excelencia.</p>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqEncabezado3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqColapso3" aria-expanded="false" aria-controls="faqColapso3">
+                                ¿Cuánto dura un tratamiento de ortodoncia?
+                            </button>
+                        </h3>
+                        <div id="faqColapso3" class="accordion-collapse collapse" aria-labelledby="faqEncabezado3"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pregunta frecuente de ejemplo — respuesta pendiente de copy definitivo. La duración
+                                varía según cada caso particular.
+                            </div>
                         </div>
                     </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqEncabezado4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqColapso4" aria-expanded="false" aria-controls="faqColapso4">
+                                ¿Las carillas dañan el diente natural?
+                            </button>
+                        </h3>
+                        <div id="faqColapso4" class="accordion-collapse collapse" aria-labelledby="faqEncabezado4"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pregunta frecuente de ejemplo — respuesta pendiente de copy definitivo. Es un
+                                procedimiento conservador que preserva la mayor parte de la pieza dental.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqEncabezado5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqColapso5" aria-expanded="false" aria-controls="faqColapso5">
+                                ¿Atienden urgencias odontológicas?
+                            </button>
+                        </h3>
+                        <div id="faqColapso5" class="accordion-collapse collapse" aria-labelledby="faqEncabezado5"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pregunta frecuente de ejemplo — respuesta pendiente de copy definitivo. Escribinos por
+                                WhatsApp y coordinamos la atención a la brevedad.
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

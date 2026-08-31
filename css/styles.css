@@ -887,4 +887,112 @@ footer {
   color: #ffffff;
 }
 
+/* =========================================
+   SECCIÓN: INTRO REUTILIZABLE (casos-exito, faq)
+   ========================================= */
+.seccion-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.seccion-intro h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: var(--azul-oscuro);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.seccion-intro p {
+  font-size: 0.95rem;
+  color: var(--gris-texto);
+  line-height: 1.7;
+}
+
+/* =========================================
+   PLACEHOLDER DE VIDEO (porque-escucharme, paso-a-paso)
+   ========================================= */
+.placeholder-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   SECCIÓN: PASO A PASO
+   ========================================= */
+.paso-a-paso {
+  background-color: #faf0df;
+  padding: 60px 20px;
+}
+.paso-a-paso-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.paso-a-paso-texto {
+  text-align: center;
+}
+.paso-a-paso-texto h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: var(--azul-oscuro);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.paso-a-paso-texto p {
+  font-size: 0.95rem;
+  color: var(--gris-texto);
+  line-height: 1.7;
+}
+.paso-a-paso-container .placeholder-video {
+  border-color: rgba(26, 60, 94, 0.3);
+  color: rgba(26, 60, 94, 0.5);
+}
+
+/* =========================================
+   SECCIÓN: FAQ
+   ========================================= */
+.faq-seccion {
+  background-color: var(--blanco);
+  padding: 60px 20px;
+}
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-container .accordion-button {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  color: var(--azul-oscuro);
+}
+.faq-container .accordion-button:not(.collapsed) {
+  background-color: var(--crema);
+  color: var(--azul-oscuro);
+}
+.faq-container .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--dorado);
+}
+.faq-container .accordion-body {
+  color: var(--gris-texto);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
