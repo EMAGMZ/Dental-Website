@@ -295,6 +295,10 @@ main {
   .etiqueta {
     font-size: 1.5rem;
   }
+  .miNav .navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+  }
 }
 .miNav {
   position: fixed !important;
@@ -309,10 +313,11 @@ main {
 }
 .miNav .navbar-brand {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
   color: var(--texto-claro) !important;
+  white-space: nowrap;
 }
 .miNav .nav-link {
   font-family: "Cormorant Garamond", serif;
