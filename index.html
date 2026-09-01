@@ -124,48 +124,125 @@
                     </ul>
                 </div>
 
-                <form class="turnos-form" action="#" method="POST" novalidate>
+                <form class="turnos-form turnos-wizard" id="wizardTurnos" novalidate>
 
-                    <div class="turnos-form-grupo">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
-                            autocomplete="given-name" />
+                    <div class="wizard-progreso">
+                        <div class="wizard-progreso-barra"></div>
+                    </div>
+                    <p class="wizard-progreso-texto">Paso 1 de 5</p>
+
+                    <div class="wizard-pasos">
+
+                        <!-- Paso 1: tratamiento -->
+                        <div class="wizard-paso wizard-paso--activo" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">¿Qué problema querés resolver?</h3>
+                            <div class="wizard-opciones wizard-opciones--grid">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Implantes" class="wizard-opcion-input">
+                                    <span>Implantes</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Carillas" class="wizard-opcion-input">
+                                    <span>Carillas</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Rehabilitación oral completa"
+                                        class="wizard-opcion-input">
+                                    <span>Rehabilitación oral completa</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Blanqueamiento" class="wizard-opcion-input">
+                                    <span>Blanqueamiento</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Ortodoncia" class="wizard-opcion-input">
+                                    <span>Ortodoncia</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Dolor o urgencia" class="wizard-opcion-input">
+                                    <span>Dolor o urgencia</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Otro" class="wizard-opcion-input">
+                                    <span>Otro</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 2: interés (slider) -->
+                        <div class="wizard-paso" data-tipo="slider">
+                            <h3 class="wizard-pregunta">¿Qué tan interesado estás en resolverlo?</h3>
+                            <div class="wizard-slider">
+                                <input type="range" id="wizardInteres" min="1" max="10" value="5"
+                                    class="wizard-slider-input">
+                                <div class="wizard-slider-escala">
+                                    <span>Poco interés</span>
+                                    <span class="wizard-slider-valor" id="wizardInteresValor">5</span>
+                                    <span>Muy interesado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 3: urgencia -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">¿Qué tan pronto querés resolverlo?</h3>
+                            <div class="wizard-opciones">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="urgencia" value="Lo antes posible" class="wizard-opcion-input">
+                                    <span>Lo antes posible</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="urgencia" value="No hay apuro" class="wizard-opcion-input">
+                                    <span>No hay apuro</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="urgencia" value="Dentro de un mes" class="wizard-opcion-input">
+                                    <span>Dentro de un mes</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 4: presupuesto -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">La consulta tiene un valor de $30.000. ¿Podés destinar ese
+                                presupuesto ahora?</h3>
+                            <div class="wizard-opciones">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="presupuesto" value="Sí, puedo ahora" class="wizard-opcion-input">
+                                    <span>Sí, puedo ahora</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="presupuesto" value="Prefiero info antes de decidir"
+                                        class="wizard-opcion-input">
+                                    <span>Prefiero info antes de decidir</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="presupuesto" value="Necesito otra alternativa"
+                                        class="wizard-opcion-input">
+                                    <span>Necesito otra alternativa</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 5: contacto -->
+                        <div class="wizard-paso" data-tipo="contacto">
+                            <h3 class="wizard-pregunta">¿Cómo te contactamos?</h3>
+                            <div class="turnos-form-grupo">
+                                <label for="wizardNombre">Nombre</label>
+                                <input type="text" id="wizardNombre" placeholder="Tu nombre" autocomplete="name" />
+                            </div>
+                            <div class="turnos-form-grupo">
+                                <label for="wizardTelefono">WhatsApp / Teléfono</label>
+                                <input type="tel" id="wizardTelefono" placeholder="Ej: +54 9 387 000-0000"
+                                    autocomplete="tel" />
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="turnos-form-grupo">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required
-                            autocomplete="family-name" />
-                    </div>
-
-                    <div class="turnos-form-grupo">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 387 000-0000" required
-                            autocomplete="tel" />
-                    </div>
-
-                    <div class="turnos-form-grupo turnos-form-grupo--full">
-                        <label for="motivo">Motivo de la consulta</label>
-                        <select id="motivo" name="motivo" required>
-                            <option value="" disabled selected>Seleccioná una opción</option>
-                            <option value="rehabilitacion">Rehabilitación oral</option>
-                            <option value="ortodoncia">Ortodoncia</option>
-                            <option value="implantes">Implantes dentales</option>
-                            <option value="blanqueamiento">Blanqueamiento dental</option>
-                            <option value="limpieza">Limpieza y control</option>
-                            <option value="urgencia">Urgencia odontológica</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-
-                    <div class="turnos-form-grupo turnos-form-grupo--full">
-                        <label for="mensaje">Información adicional <span>(opcional)</span></label>
-                        <textarea id="mensaje" name="mensaje" rows="4"
-                            placeholder="Contanos más sobre tu consulta..."></textarea>
-                    </div>
-
-                    <div class="turnos-form-grupo turnos-form-grupo--full">
-                        <button type="submit" class="btn-sobre-mi">Solicitar turno</button>
+                    <div class="wizard-nav">
+                        <button type="button" class="wizard-btn-atras" disabled>Atrás</button>
+                        <button type="button" class="wizard-btn-siguiente btn-sobre-mi" disabled>Siguiente</button>
                     </div>
 
                 </form>
@@ -503,6 +580,7 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/wizard.js" defer></script>
 
 </body>
 

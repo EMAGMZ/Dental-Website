@@ -1060,4 +1060,157 @@ footer {
   font-size: 0.9rem;
 }
 
+/* =========================================
+   WIZARD DE TURNOS (cuestionario filtrante)
+   ========================================= */
+.turnos-wizard {
+  display: block;
+}
+
+.wizard-progreso {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.wizard-progreso-barra {
+  height: 100%;
+  width: 20%;
+  background-color: var(--dorado);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+.wizard-progreso-texto {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gris-texto);
+  margin-bottom: 24px;
+}
+
+.wizard-paso {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+.wizard-paso--activo {
+  display: flex;
+}
+
+.wizard-pregunta {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  color: var(--texto-claro);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.wizard-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 600px) {
+  .wizard-opciones--grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.wizard-opcion {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 14px 18px;
+  cursor: pointer;
+  background-color: var(--fondo-oscuro);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.wizard-opcion span {
+  font-size: 0.95rem;
+  color: var(--texto-claro);
+}
+.wizard-opcion:hover {
+  border-color: var(--dorado);
+}
+.wizard-opcion--activa {
+  border-color: var(--dorado);
+  background-color: rgba(217, 140, 74, 0.12);
+}
+.wizard-opcion:focus-within {
+  outline: 2px solid var(--dorado);
+  outline-offset: 2px;
+}
+.wizard-opcion-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  accent-color: var(--dorado);
+}
+
+.wizard-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wizard-slider-input {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  accent-color: var(--dorado);
+}
+.wizard-slider-escala {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gris-texto);
+}
+.wizard-slider-valor {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--dorado);
+}
+
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+.wizard-btn-atras {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--texto-claro);
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.wizard-btn-atras:hover:not(:disabled) {
+  border-color: var(--dorado);
+}
+.wizard-btn-atras:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.wizard-btn-siguiente:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /*# sourceMappingURL=styles.css.map */
