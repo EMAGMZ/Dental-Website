@@ -1,0 +1,14 @@
+{
+  "name": "lucianococa",
+  "private": true,
+  "scripts": {
+    "sass": "sass sass/main.scss css/styles.css --watch --source-map",
+    "serve": "live-server --port=5500 --no-browser",
+    "dev": "concurrently -k -n sass,serve -c yellow,cyan \"npm:sass\" \"npm:serve\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.79.4"
+  }
+}
