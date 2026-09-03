@@ -143,7 +143,7 @@ main {
   padding: 10rem 0;
 }
 .titutlosTextos h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -155,11 +155,17 @@ main {
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
 }
+
 .titutlosTextos p {
-  color: var(--dorado);
+
+  color: var(--blanco);
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 1.3rem;
+
+  margin-top: 160px;
+
+
 }
 
 @media (min-width: 600px) {
