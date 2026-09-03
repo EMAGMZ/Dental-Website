@@ -651,14 +651,15 @@ main {
 
 .carousel-item {
   position: relative;
-  border-radius: 10px;
+  border-radius: 3px;
+  padding: 4px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: var(--fondo-oscuro-2);
 }
 
 .carousel-inner img {
-  border-radius: 10px;
+  border-radius: 0px;
   height: 220px;
   object-fit: cover;
 }
@@ -715,7 +716,7 @@ main {
     height: 600px;
   }
   .carousel-inner img {
-    border-radius: 30px;
+    border-radius: 10px;
     height: 100%;
     object-position: center 46%;
   }
