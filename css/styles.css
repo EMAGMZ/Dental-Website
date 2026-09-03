@@ -982,10 +982,16 @@ main {
 }
 .sobre-mi-img img {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 900px) {
+  .sobre-mi-img img {
+    height: 500px;
+    aspect-ratio: auto;
+  }
 }
 
 .sobre-mi-texto {
