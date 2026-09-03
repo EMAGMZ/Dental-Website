@@ -37,12 +37,19 @@ main {
   z-index: 999;
 }
 .miNav .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: "Cormorant Garamond", serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--texto-claro) !important;
   white-space: nowrap;
+}
+.navbar-logo {
+  height: 40px;
+  width: auto;
 }
 @media (min-width: 600px) {
   .miNav .navbar-brand {
@@ -187,7 +194,7 @@ main {
 /* PORQUE */
 .etiqueta {
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: 1rem;
   font-family: "Cormorant Garamond", serif;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -465,6 +472,26 @@ main {
   opacity: 0;
   pointer-events: none;
   accent-color: var(--dorado);
+}
+
+.wizard-otro-campo {
+  margin-top: 16px;
+}
+.wizard-otro-textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 14px 18px;
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-claro);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.wizard-otro-textarea:focus {
+  outline: 2px solid var(--dorado);
+  outline-offset: 2px;
+  border-color: var(--dorado);
 }
 
 .wizard-slider {

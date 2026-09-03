@@ -33,7 +33,10 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg miNav">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">Estética Dental en Salta</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="css/img/logo2.png" alt="Logo" class="navbar-logo">
+                        Estética Dental en Salta
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                         <span class="navbar-toggler-icon"></span>
@@ -309,14 +312,50 @@
                                     <span>Aclarar mi sorisa</span>
                                 </label>
                                 <label class="wizard-opcion">
-                                    <input type="radio" name="tratamiento" value="Otro" class="wizard-opcion-input">
+                                    <input type="radio" name="tratamiento" value="Otro" class="wizard-opcion-input" id="wizardTratamientoOtro">
                                     <span>Otro</span>
                                 </label>
+                            </div>
+                            <div class="wizard-otro-campo" id="wizardOtroCampo" hidden>
+                                <textarea id="wizardOtroTexto" class="wizard-otro-textarea" placeholder="Contanos tu situación..." rows="3"></textarea>
                             </div>
                         </div>
 
 
-                        <!-- AGREGAR EL Paso 2:  historial del problema -->
+                        <!-- Paso 2: historial del problema -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">Historial del problema</h3>
+                            <div class="wizard-opciones wizard-opciones--grid">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="Menos de 1 semana" class="wizard-opcion-input">
+                                    <span>Menos de 1 semana</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 1 semana a 1 mes" class="wizard-opcion-input">
+                                    <span>De 1 semana a 1 mes</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 1 a 3 meses" class="wizard-opcion-input">
+                                    <span>De 1 a 3 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 3 a 6 meses" class="wizard-opcion-input">
+                                    <span>De 3 a 6 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 6 meses a 2 años" class="wizard-opcion-input">
+                                    <span>De 6 meses a 2 años</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="Más de 2 años" class="wizard-opcion-input">
+                                    <span>Más de 2 años</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="No recuerdo" class="wizard-opcion-input">
+                                    <span>No recuerdo</span>
+                                </label>
+                            </div>
+                        </div>
 
                         <!-- Paso 3: que cambiaria en tu vida -->
                         <div class="wizard-paso" data-tipo="opciones">

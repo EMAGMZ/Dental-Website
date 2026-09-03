@@ -20,8 +20,13 @@
     var inputNombre = wizard.querySelector("#wizardNombre");
     var inputTelefono = wizard.querySelector("#wizardTelefono");
 
+    var inputTratamientoOtro = wizard.querySelector("#wizardTratamientoOtro");
+    var campoOtro = wizard.querySelector("#wizardOtroCampo");
+    var textoOtro = wizard.querySelector("#wizardOtroTexto");
+
     var respuestas = {
         tratamiento: "",
+        historial: "",
         interes: 5,
         urgencia: "",
         presupuesto: "",
@@ -39,10 +44,15 @@
 
     function recolectarRespuestas() {
         var tratamientoInput = wizard.querySelector('input[name="tratamiento"]:checked');
+        var historialInput = wizard.querySelector('input[name="historial"]:checked');
         var urgenciaInput = wizard.querySelector('input[name="urgencia"]:checked');
         var presupuestoInput = wizard.querySelector('input[name="presupuesto"]:checked');
 
         respuestas.tratamiento = tratamientoInput ? tratamientoInput.value : "";
+        if (tratamientoInput && tratamientoInput.value === "Otro" && textoOtro) {
+            respuestas.tratamiento = "Otro: " + textoOtro.value.trim();
+        }
+        respuestas.historial = historialInput ? historialInput.value : "";
         respuestas.interes = inputInteres ? Number(inputInteres.value) : 5;
         respuestas.urgencia = urgenciaInput ? urgenciaInput.value : "";
         respuestas.presupuesto = presupuestoInput ? presupuestoInput.value : "";
@@ -65,6 +75,9 @@
 
         if (tipo === "opciones") {
             valido = !!paso.querySelector('input[type="radio"]:checked');
+            if (valido && inputTratamientoOtro && inputTratamientoOtro.checked) {
+                valido = !!(textoOtro && textoOtro.value.trim().length > 0);
+            }
         } else if (tipo === "slider") {
             valido = true;
         } else if (tipo === "contacto") {
@@ -108,6 +121,7 @@
             "Nombre: " + respuestas.nombre,
             "Teléfono: " + respuestas.telefono,
             "Tratamiento: " + respuestas.tratamiento,
+            "Historial del problema: " + respuestas.historial,
             "Interés (1-10): " + respuestas.interes,
             "Urgencia: " + respuestas.urgencia,
             "Presupuesto: " + respuestas.presupuesto
@@ -135,6 +149,15 @@
             if (opcionActiva) {
                 opcionActiva.classList.add("wizard-opcion--activa");
             }
+            if (campoOtro && evento.target.name === "tratamiento") {
+                var esOtro = evento.target === inputTratamientoOtro;
+                campoOtro.hidden = !esOtro;
+                if (esOtro && textoOtro) {
+                    textoOtro.focus();
+                } else if (textoOtro) {
+                    textoOtro.value = "";
+                }
+            }
             validarPasoActual();
         }
     });
@@ -143,7 +166,7 @@
         if (evento.target === inputInteres && valorInteres) {
             valorInteres.textContent = inputInteres.value;
         }
-        if (evento.target === inputNombre || evento.target === inputTelefono) {
+        if (evento.target === inputNombre || evento.target === inputTelefono || evento.target === textoOtro) {
             validarPasoActual();
         }
     });
