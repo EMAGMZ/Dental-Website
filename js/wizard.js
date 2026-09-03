@@ -15,8 +15,6 @@
     var btnAtras = wizard.querySelector(".wizard-btn-atras");
     var btnSiguiente = wizard.querySelector(".wizard-btn-siguiente");
 
-    var inputInteres = wizard.querySelector("#wizardInteres");
-    var valorInteres = wizard.querySelector("#wizardInteresValor");
     var inputNombre = wizard.querySelector("#wizardNombre");
     var inputTelefono = wizard.querySelector("#wizardTelefono");
 
@@ -27,7 +25,7 @@
     var respuestas = {
         tratamiento: "",
         historial: "",
-        interes: 5,
+        cuando: "",
         urgencia: "",
         presupuesto: "",
         nombre: "",
@@ -45,6 +43,7 @@
     function recolectarRespuestas() {
         var tratamientoInput = wizard.querySelector('input[name="tratamiento"]:checked');
         var historialInput = wizard.querySelector('input[name="historial"]:checked');
+        var cuandoInput = wizard.querySelector('input[name="cuando"]:checked');
         var urgenciaInput = wizard.querySelector('input[name="urgencia"]:checked');
         var presupuestoInput = wizard.querySelector('input[name="presupuesto"]:checked');
 
@@ -53,7 +52,7 @@
             respuestas.tratamiento = "Otro: " + textoOtro.value.trim();
         }
         respuestas.historial = historialInput ? historialInput.value : "";
-        respuestas.interes = inputInteres ? Number(inputInteres.value) : 5;
+        respuestas.cuando = cuandoInput ? cuandoInput.value : "";
         respuestas.urgencia = urgenciaInput ? urgenciaInput.value : "";
         respuestas.presupuesto = presupuestoInput ? presupuestoInput.value : "";
         respuestas.nombre = inputNombre ? inputNombre.value.trim() : "";
@@ -62,7 +61,7 @@
 
     function esLeadCaliente() {
         return (
-            respuestas.interes >= 7 &&
+            respuestas.cuando === "Lo antes posible" &&
             respuestas.urgencia === "Lo antes posible" &&
             respuestas.presupuesto === "Sí, puedo ahora"
         );
@@ -78,8 +77,6 @@
             if (valido && inputTratamientoOtro && inputTratamientoOtro.checked) {
                 valido = !!(textoOtro && textoOtro.value.trim().length > 0);
             }
-        } else if (tipo === "slider") {
-            valido = true;
         } else if (tipo === "contacto") {
             var nombreOk = inputNombre && inputNombre.value.trim().length > 1;
             var telefonoOk = inputTelefono && inputTelefono.value.trim().length > 5;
@@ -122,7 +119,7 @@
             "Teléfono: " + respuestas.telefono,
             "Tratamiento: " + respuestas.tratamiento,
             "Historial del problema: " + respuestas.historial,
-            "Interés (1-10): " + respuestas.interes,
+            "¿Cuándo le gustaría resolverlo?: " + respuestas.cuando,
             "Urgencia: " + respuestas.urgencia,
             "Presupuesto: " + respuestas.presupuesto
         ];
@@ -163,9 +160,6 @@
     });
 
     wizard.addEventListener("input", function (evento) {
-        if (evento.target === inputInteres && valorInteres) {
-            valorInteres.textContent = inputInteres.value;
-        }
         if (evento.target === inputNombre || evento.target === inputTelefono || evento.target === textoOtro) {
             validarPasoActual();
         }

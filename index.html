@@ -324,7 +324,7 @@
 
                         <!-- Paso 2: historial del problema -->
                         <div class="wizard-paso" data-tipo="opciones">
-                            <h3 class="wizard-pregunta">Historial del problema</h3>
+                            <h3 class="wizard-pregunta">¿hace cuando tiempo lleva lidiando con este problema?</h3>
                             <div class="wizard-opciones wizard-opciones--grid">
                                 <label class="wizard-opcion">
                                     <input type="radio" name="historial" value="Menos de 1 semana" class="wizard-opcion-input">
@@ -379,17 +379,26 @@
                                 </label>
                             </div>
                         </div>
-                         <!-- Paso 4: interés (slider) -->
-                        <div class="wizard-paso" data-tipo="slider">
-                            <h3 class="wizard-pregunta">Si tenemos la solucion para vos. ¿Cuando te gustaria resolverlo?</h3>
-                            <div class="wizard-slider">
-                                <input type="range" id="wizardInteres" min="1" max="10" value="5"
-                                    class="wizard-slider-input">
-                                <div class="wizard-slider-escala">
-                                    <span>Poco interés</span>
-                                    <span class="wizard-slider-valor" id="wizardInteresValor">5</span>
-                                    <span>Muy interesado</span>
-                                </div>
+                         <!-- Paso 4: cuándo resolverlo -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">¿Cuándo te gustaría resolverlo?</h3>
+                            <div class="wizard-opciones wizard-opciones--grid">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="Lo antes posible" class="wizard-opcion-input">
+                                    <span>Lo antes posible</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="En los próximos 1-3 meses" class="wizard-opcion-input">
+                                    <span>En los próximos 1-3 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="En los próximos 3-6 meses" class="wizard-opcion-input">
+                                    <span>En los próximos 3-6 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="Todavía no lo decidí" class="wizard-opcion-input">
+                                    <span>Todavía no lo decidí</span>
+                                </label>
                             </div>
                         </div>
 
