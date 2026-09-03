@@ -52,7 +52,7 @@ main {
 }
 .miNav .nav-link {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--texto-claro) !important;
