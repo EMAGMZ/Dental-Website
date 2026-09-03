@@ -654,7 +654,7 @@ main {
   border-radius: 3px;
   padding: 4px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(0, 0, 0);
   background-color: var(--fondo-oscuro-2);
 }
 
@@ -670,7 +670,6 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(204, 71, 71, 0) 60%);
   border-radius: inherit;
   z-index: 0;
   pointer-events: none;
@@ -716,7 +715,7 @@ main {
     height: 600px;
   }
   .carousel-inner img {
-    border-radius: 10px;
+    border-radius: 0px;
     height: 100%;
     object-position: center 46%;
   }
@@ -738,10 +737,11 @@ main {
   background-color: var(--fondo-oscuro-2);
   padding: 4px;
   position: relative;
-  height: 250px;
+  width: 98%;
+  margin: 0 auto;
+  height: 230px;
   border-radius: 3px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .imagenLuciano img {
   border-radius: 0px;
