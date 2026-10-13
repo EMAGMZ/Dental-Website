@@ -874,7 +874,108 @@ main {
 .caso-card .caso-img:hover img {
   transform: scale(1.05);
 }
+.caso-card .caso-img:hover .comparador-img {
+  transform: none;
+}
+
+.comparador {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  user-select: none;
+  touch-action: pan-y;
+  container-type: size;
+}
+.comparador-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.caso-card .caso-img .comparador-img--alineada {
+  inset: auto;
+  max-width: none;
+  object-fit: fill;
+  width: calc(var(--iw) * var(--s) * 1cqh);
+  height: calc(var(--ih) * var(--s) * 1cqh);
+  left: calc(50cqw - var(--ax) * var(--s) * 1cqh);
+  top: calc((var(--ty) - var(--ay) * var(--s)) * 1cqh);
+}
+/* el recorte se mide sobre la caja de la imagen, que ya no coincide con el contenedor */
+.caso-card .caso-img .comparador-img--alineada.comparador-antes {
+  clip-path: inset(-100vmax calc(50cqw + (var(--iw) - var(--ax)) * var(--s) * 1cqh - var(--p) * 1cqw) -100vmax -100vmax);
+}
+.comparador-antes {
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+.comparador-placeholder {
+  filter: sepia(0.3);
+}
+.comparador-linea {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 2px;
+  background-color: var(--texto-claro);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+.comparador-manija {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--dorado);
+  border-radius: 50%;
+  background-color: var(--fondo-oscuro);
+  color: var(--dorado);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.comparador-manija::before {
+  content: "\2039  \203A";
+  white-space: pre;
+}
+.comparador-label {
+  position: absolute;
+  bottom: 12px;
+  z-index: 2;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--texto-claro);
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 4px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.comparador-label--antes {
+  left: 12px;
+}
+.comparador-label--despues {
+  right: 12px;
+}
+.comparador-rango {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 2;
+}
 .caso-card .caso-etiqueta {
+  z-index: 3;
+  pointer-events: none;
   position: absolute;
   top: 16px;
   left: 16px;
