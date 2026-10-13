@@ -306,6 +306,10 @@ main {
   background-color: var(--fondo-oscuro);
   padding: 60px 20px;
 }
+/* casos.html y turnos.html no tienen hero: dejan lugar al navbar fijo */
+.casos-seccion, .turnos-seccion {
+  padding-top: 130px;
+}
 
 .turnos-container {
   max-width: 1100px;
