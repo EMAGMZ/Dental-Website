@@ -693,7 +693,7 @@ main {
 }
 
 .carousel-inner img {
-  border-radius: 0px;
+  border-radius: 12px;
   height: 220px;
   object-fit: cover;
 }
@@ -749,7 +749,7 @@ main {
     height: 600px;
   }
   .carousel-inner img {
-    border-radius: 0px;
+    border-radius: 20px;
     height: 100%;
     object-position: center 46%;
   }
