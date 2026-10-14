@@ -295,6 +295,17 @@ main {
   font-size: 0.9rem;
 }
 
+.video-seccion {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(212, 175, 55, 0.15);
+}
+
 @media (min-width: 600px) {
   .porque {
     padding: 80px 40px;
