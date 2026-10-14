@@ -1103,18 +1103,39 @@ main {
     flex-shrink: 0;
   }
 }
+.sobre-mi-carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+/* anula los estilos globales .carousel-item / .carousel-inner img (pensados para el carrusel de tratamientos) */
+.sobre-mi-carousel .carousel-item {
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+.sobre-mi-carousel .carousel-inner img {
+  height: auto;
+  object-position: center;
+}
 .sobre-mi-img img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 900px) {
-  .sobre-mi-img img {
+  .sobre-mi-img .carousel-inner img {
     height: 500px;
     aspect-ratio: auto;
   }
+}
+
+/* foto donde el doctor está a la izquierda: encuadra de ese lado para que no se corte */
+.sobre-mi-img img.img-foco-izq {
+  object-position: 0% center;
 }
 
 .sobre-mi-texto {
@@ -1180,6 +1201,50 @@ main {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;
+}
+
+/* SOBRE MÍ + FORMACIÓN: distribución solo para desktop */
+@media (min-width: 992px) {
+  /* esta página no tiene hero: deja lugar al navbar fijo (igual que casos y turnos) */
+  .sobre-mi {
+    padding: 130px 20px 90px;
+  }
+  /* dos columnas iguales, sin que los porcentajes + gap se pisen */
+  .sobre-mi-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 72px;
+    align-items: center;
+    padding: 0;
+  }
+  .sobre-mi-img,
+  .sobre-mi-texto {
+    width: 100%;
+    padding: 0;
+  }
+  .sobre-mi-img .carousel-inner img {
+    height: 560px;
+  }
+  .sobre-mi-texto {
+    max-width: 520px;
+  }
+  .sobre-mi-texto .btn-sobre-mi {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+  /* formación: título centrado y 4 columnas con aire */
+  .formacion {
+    padding: 80px 20px;
+  }
+  .formacion .formacion-container {
+    gap: 48px;
+  }
+  .formacion .formacion-container > .etiqueta {
+    align-self: center;
+  }
+  .formacion .formacion-grid {
+    gap: 40px;
+  }
 }
 
 /* CONTACTO */
