@@ -201,7 +201,7 @@ main {
   border-bottom: 1px solid rgba(217, 140, 74, 0.5);
   box-shadow: 0 10px 30px rgba(217, 140, 74, 0.18);
   border-radius: 8px;
-  background-image: url(./img/titulosContImg.jpg);
+  background-image: url(./img/titulosContImg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -390,7 +390,7 @@ main {
   flex-direction: column;
   gap: 8px;
 }
-.carousel-caption h5 {
+.carousel-caption h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -482,7 +482,7 @@ main {
     right: 36px;
     bottom: 36px;
   }
-  .carousel-caption h5,
+  .carousel-caption h3,
   .imagenLucianoTexto h2 {
     font-size: 1.9rem;
   }
@@ -880,7 +880,7 @@ main {
   border-left: 2px solid var(--dorado);
   padding-left: 16px;
 }
-.formacion .formacion-item h4 {
+.formacion .formacion-item h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
   color: var(--texto-claro);
@@ -1212,7 +1212,7 @@ main {
 }
 .contacto-btn.contacto-btn-whatsapp {
   background-color: #25d366;
-  color: var(--blanco);
+  color: var(--fondo-oscuro);
 }
 .contacto-btn.contacto-btn-whatsapp:hover {
   background-color: #1da851;
@@ -1266,5 +1266,5 @@ footer {
 }
 .footerCopy p {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--gris-texto);
 }
