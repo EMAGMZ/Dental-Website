@@ -151,7 +151,7 @@ main {
   color: var(--fondo-oscuro);
 }
 
-/* botón agendar turno (CTAs del inicio) */
+/* botón agendar turno (final de tratamientos y faq) */
 .btn-turno {
   display: inline-block;
   width: 100%;
@@ -190,7 +190,18 @@ main {
   color: var(--acento-claro);
   box-shadow: none;
 }
+.seccion-cta {
+  width: 98%;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 @media (min-width: 600px) {
+  .seccion-cta {
+    flex-direction: row;
+    justify-content: center;
+  }
   .btn-turno {
     width: auto;
     padding: 16px 44px;
@@ -461,65 +472,6 @@ main {
   }
   .imagenLucianoTexto p {
     font-size: 1.6rem;
-  }
-}
-
-/* CTA AGENDAR TURNO (después de tratamientos y antes del footer) */
-.cta-turno {
-  padding: 60px 20px;
-  text-align: center;
-  border-top: 1px solid rgba(217, 140, 74, 0.2);
-  border-bottom: 1px solid rgba(217, 140, 74, 0.2);
-  background: radial-gradient(ellipse 70% 100% at 50% 50%, rgba(217, 140, 74, 0.12), transparent 75%);
-}
-.cta-turno--cierre {
-  border-bottom: none;
-  background: linear-gradient(to bottom, transparent, var(--fondo-oscuro-2));
-}
-.cta-turno-contenido {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-.cta-turno-contenido .etiqueta {
-  margin-bottom: 4px;
-}
-.cta-turno-contenido h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--texto-claro);
-}
-.cta-turno-contenido p {
-  font-size: 1rem;
-  color: var(--gris-texto);
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-.cta-turno-botones {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-@media (min-width: 600px) {
-  .cta-turno {
-    padding: 90px 40px;
-  }
-  .cta-turno-contenido h2 {
-    font-size: 2.6rem;
-  }
-  .cta-turno-contenido p {
-    font-size: 1.2rem;
-  }
-  .cta-turno-botones {
-    flex-direction: row;
-    justify-content: center;
-    width: auto;
   }
 }
 
