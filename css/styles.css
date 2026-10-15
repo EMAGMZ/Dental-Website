@@ -179,19 +179,16 @@ main {
   box-shadow: 0 0 32px rgba(232, 179, 132, 0.5);
 }
 .seccion-cta {
-  width: 98%;
-  margin: 40px auto 0;
+  margin-top: 40px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  justify-content: center;
+}
+.seccion-cta .btn-turno {
+  width: 300px;
+  max-width: 100%;
 }
 @media (min-width: 600px) {
-  .seccion-cta {
-    flex-direction: row;
-    justify-content: center;
-  }
   .btn-turno {
-    width: auto;
     padding: 16px 44px;
     font-size: 1.2rem;
   }
