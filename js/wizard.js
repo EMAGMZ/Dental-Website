@@ -4,7 +4,7 @@
     var wizard = document.getElementById("wizardTurnos");
     if (!wizard) return;
 
-    var NUMERO_WHATSAPP = "543872243511";
+    var NUMERO_WHATSAPP = "5493872243511";
 
     var pasos = Array.prototype.slice.call(wizard.querySelectorAll(".wizard-paso"));
     var total = pasos.length;
@@ -26,7 +26,7 @@
         tratamiento: "",
         historial: "",
         cuando: "",
-        urgencia: "",
+        cambio: "",
         presupuesto: "",
         nombre: "",
         telefono: ""
@@ -44,7 +44,7 @@
         var tratamientoInput = wizard.querySelector('input[name="tratamiento"]:checked');
         var historialInput = wizard.querySelector('input[name="historial"]:checked');
         var cuandoInput = wizard.querySelector('input[name="cuando"]:checked');
-        var urgenciaInput = wizard.querySelector('input[name="urgencia"]:checked');
+        var cambioInput = wizard.querySelector('input[name="cambio"]:checked');
         var presupuestoInput = wizard.querySelector('input[name="presupuesto"]:checked');
 
         respuestas.tratamiento = tratamientoInput ? tratamientoInput.value : "";
@@ -53,7 +53,7 @@
         }
         respuestas.historial = historialInput ? historialInput.value : "";
         respuestas.cuando = cuandoInput ? cuandoInput.value : "";
-        respuestas.urgencia = urgenciaInput ? urgenciaInput.value : "";
+        respuestas.cambio = cambioInput ? cambioInput.value : "";
         respuestas.presupuesto = presupuestoInput ? presupuestoInput.value : "";
         respuestas.nombre = inputNombre ? inputNombre.value.trim() : "";
         respuestas.telefono = inputTelefono ? inputTelefono.value.trim() : "";
@@ -62,7 +62,6 @@
     function esLeadCaliente() {
         return (
             respuestas.cuando === "Lo antes posible" &&
-            respuestas.urgencia === "Lo antes posible" &&
             respuestas.presupuesto === "Sí, puedo ahora"
         );
     }
@@ -119,8 +118,8 @@
             "Teléfono: " + respuestas.telefono,
             "Tratamiento: " + respuestas.tratamiento,
             "Historial del problema: " + respuestas.historial,
+            "¿Qué cambiaría en su vida?: " + respuestas.cambio,
             "¿Cuándo le gustaría resolverlo?: " + respuestas.cuando,
-            "Urgencia: " + respuestas.urgencia,
             "Presupuesto: " + respuestas.presupuesto
         ];
 
