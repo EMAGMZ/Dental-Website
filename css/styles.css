@@ -235,7 +235,7 @@ main {
     opacity: 1;
   }
 }
-.titutlosTextos {
+.titulosTextos {
   position: relative;
   z-index: 1;
   display: flex;
@@ -247,14 +247,14 @@ main {
   margin: 0 auto;
   padding: 10rem 0;
 }
-.titutlosTextos h1 {
+.titulosTextos h1 {
   font-size: 2rem;
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--texto-claro);
 }
-.titutlosTextos p {
+.titulosTextos p {
   color: var(--blanco);
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
@@ -266,10 +266,10 @@ main {
     min-height: 70vh;
     background-position: center 17%;
   }
-  .titutlosTextos h1 {
+  .titulosTextos h1 {
     font-size: 4rem;
   }
-  .titutlosTextos p {
+  .titulosTextos p {
     font-size: 1.5rem;
   }
 }
