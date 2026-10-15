@@ -284,9 +284,14 @@ main {
   padding: 40px 20px;
 }
 .porque-grid {
+  max-width: 900px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+}
+.porque-texto {
+  text-align: center;
 }
 .porque-texto h2 {
   font-family: "Cormorant Garamond", serif;
@@ -313,9 +318,6 @@ main {
 @media (min-width: 600px) {
   .porque {
     padding: 80px 40px;
-  }
-  .porque-grid {
-    grid-template-columns: 1fr 1fr;
   }
   .porque-texto h2 {
     font-size: 2.2rem;
