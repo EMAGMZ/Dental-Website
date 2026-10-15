@@ -275,9 +275,6 @@ main {
 
 /* CÓMO TRABAJAMOS (video) */
 .porque {
-  background-color: var(--fondo-oscuro-2);
-  background-image: var(--ondas);
-  background-size: 100% 100%;
   padding: 40px 20px;
 }
 .porque-grid {
@@ -865,9 +862,6 @@ main {
 
 /* FORMACIÓN */
 .formacion {
-  background-color: var(--fondo-oscuro-2);
-  background-image: var(--ondas);
-  background-size: 100% 100%;
   padding: 60px 20px;
 }
 .formacion .formacion-container {
