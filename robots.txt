@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.esteticadentalsalta.com.ar/sitemap.xml
