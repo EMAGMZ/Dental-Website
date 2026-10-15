@@ -1414,4 +1414,113 @@ footer {
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* =========================================
+   CTA: AGENDAR TURNO
+   ========================================= */
+.cta-turno {
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(217, 140, 74, 0.2);
+  border-bottom: 1px solid rgba(217, 140, 74, 0.2);
+  background: radial-gradient(ellipse 70% 100% at 50% 50%, rgba(217, 140, 74, 0.12), transparent 75%);
+}
+.cta-turno--cierre {
+  border-bottom: none;
+  background: linear-gradient(to bottom, transparent, var(--fondo-oscuro-2));
+}
+
+.cta-turno-contenido {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.cta-turno-contenido .etiqueta {
+  margin-bottom: 4px;
+}
+.cta-turno-contenido h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--texto-claro);
+}
+.cta-turno-contenido p {
+  font-size: 1rem;
+  color: var(--gris-texto);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.cta-turno-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-turno {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 32px;
+  background-color: var(--dorado);
+  color: var(--fondo-oscuro);
+  border: 2px solid var(--dorado);
+  border-radius: 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 24px rgba(217, 140, 74, 0.35);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-turno:hover,
+.btn-turno:focus-visible {
+  background-color: var(--acento-claro);
+  border-color: var(--acento-claro);
+  color: var(--fondo-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(232, 179, 132, 0.5);
+}
+
+.btn-turno--outline {
+  background-color: transparent;
+  color: var(--dorado);
+  box-shadow: none;
+}
+.btn-turno--outline:hover,
+.btn-turno--outline:focus-visible {
+  background-color: rgba(217, 140, 74, 0.12);
+  border-color: var(--acento-claro);
+  color: var(--acento-claro);
+  box-shadow: none;
+}
+
+@media (min-width: 600px) {
+  .cta-turno {
+    padding: 90px 40px;
+  }
+  .cta-turno-contenido h2 {
+    font-size: 2.6rem;
+  }
+  .cta-turno-contenido p {
+    font-size: 1.2rem;
+  }
+  .cta-turno-botones {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+  .btn-turno {
+    width: auto;
+    padding: 16px 44px;
+    font-size: 1.2rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
