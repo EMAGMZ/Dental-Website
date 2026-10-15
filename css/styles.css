@@ -199,7 +199,8 @@ main {
 /* HERO */
 .titulosContenedor {
   position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(217, 140, 74, 0.5);
+  box-shadow: 0 10px 30px rgba(217, 140, 74, 0.18);
   border-radius: 8px;
   background-image: url(./img/titulosContImg.jpg);
   background-repeat: no-repeat;
