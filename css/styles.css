@@ -1167,8 +1167,8 @@ main {
   border: 2px solid var(--dorado);
 }
 .contacto-card .contacto-card-icono {
-  font-size: 2.5rem;
   color: var(--dorado);
+  line-height: 0;
 }
 .contacto-card .contacto-card-info {
   display: flex;
