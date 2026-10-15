@@ -321,43 +321,70 @@ main {
   }
 }
 
-/* TRATAMIENTOS (carrusel + imagen innovación) */
-.tratamientos-grid {
-  display: block;
+/* TRATAMIENTOS (carrusel + card innovación) */
+.tratamientos {
+  padding: 60px 20px;
 }
-@media (min-width: 600px) {
+.tratamientos-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .tratamientos {
+    padding: 80px 40px;
+  }
   .tratamientos-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 30px;
+    gap: 32px;
   }
 }
 
-/* CARRUSEL */
-.carousel-wrapper {
-  width: 98%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.carousel-item {
+/* marco compartido: mismo borde y brillo que el video */
+.carousel-wrapper,
+.imagenLuciano {
   position: relative;
-  border-radius: 3px;
-  padding: 4px;
+  height: 440px;
   overflow: hidden;
-  border: 1px solid rgb(0, 0, 0);
-  background-color: var(--fondo-oscuro-2);
-}
-.carousel-inner img {
+  background-color: #000;
+  border: 1px solid rgba(217, 140, 74, 0.5);
   border-radius: 12px;
-  height: 220px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(217, 140, 74, 0.15);
+}
+@media (min-width: 768px) {
+  .carousel-wrapper,
+  .imagenLuciano {
+    height: 560px;
+  }
+}
+
+/* degradé para que el texto se lea sobre la foto */
+.carousel-wrapper .carousel-item::after,
+.imagenLuciano::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3, 3, 2, 0.92) 0%, rgba(3, 3, 2, 0.6) 40%, rgba(3, 3, 2, 0) 75%);
+  pointer-events: none;
+}
+
+/* CARRUSEL */
+.carousel-wrapper .carousel,
+.carousel-wrapper .carousel-inner,
+.carousel-wrapper .carousel-item {
+  height: 100%;
+}
+.carousel-wrapper .carousel-inner img {
+  height: 100%;
   object-fit: cover;
 }
 .carousel-caption {
   position: absolute;
-  left: 20px !important;
-  right: 20px !important;
-  bottom: 20px !important;
+  left: 24px !important;
+  right: 24px !important;
+  bottom: 24px !important;
   padding: 0 !important;
   text-align: left !important;
   color: var(--texto-claro) !important;
@@ -368,51 +395,48 @@ main {
 }
 .carousel-caption h5 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
 }
 .carousel-caption p {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
-@media (min-width: 600px) {
-  .carousel-item {
-    border-radius: 30px;
-    padding: 20px;
-    height: 600px;
-  }
-  .carousel-inner img {
-    border-radius: 20px;
-    height: 100%;
-    object-position: center 46%;
-  }
-  .carousel-caption {
-    left: 50px !important;
-    right: 50px !important;
-    bottom: 40px !important;
-  }
-  .carousel-caption h5 {
-    font-size: 2rem;
-  }
-  .carousel-caption p {
-    font-size: 1.6rem;
-  }
+/* flechas arriba a la derecha para no tapar el texto */
+.carousel-wrapper .carousel-control-prev,
+.carousel-wrapper .carousel-control-next {
+  top: 16px;
+  bottom: auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(217, 140, 74, 0.6);
+  border-radius: 50%;
+  background-color: rgba(3, 3, 2, 0.5);
+  opacity: 1;
+  z-index: 2;
+}
+.carousel-wrapper .carousel-control-prev {
+  left: auto;
+  right: 64px;
+}
+.carousel-wrapper .carousel-control-next {
+  right: 16px;
+}
+.carousel-wrapper .carousel-control-prev:hover,
+.carousel-wrapper .carousel-control-next:hover {
+  background-color: rgba(217, 140, 74, 0.25);
+}
+.carousel-wrapper .carousel-control-prev-icon,
+.carousel-wrapper .carousel-control-next-icon {
+  width: 16px;
+  height: 16px;
 }
 
-/* IMAGEN INNOVACIÓN */
-.imagenLuciano {
-  background-color: var(--fondo-oscuro-2);
-  padding: 4px;
-  position: relative;
-  width: 98%;
-  margin: 0 auto;
-  height: 230px;
-  border-radius: 3px;
-  overflow: hidden;
-}
+/* CARD INNOVACIÓN */
 .imagenLuciano img {
   width: 100%;
   height: 100%;
@@ -420,9 +444,9 @@ main {
 }
 .imagenLucianoTexto {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
   z-index: 1;
   color: var(--texto-claro);
   display: flex;
@@ -431,34 +455,47 @@ main {
 }
 .imagenLucianoTexto h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 0;
 }
 .imagenLucianoTexto p {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
-@media (min-width: 600px) {
-  .imagenLuciano {
-    padding: 20px;
-    border-radius: 30px;
-    height: 600px;
-  }
-  .imagenLuciano img {
-    border-radius: 30px;
+
+/* etiqueta más chica dentro de las cards */
+.carousel-caption .etiqueta,
+.imagenLucianoTexto .etiqueta {
+  align-self: flex-start;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+@media (min-width: 768px) {
+  .carousel-caption {
+    left: 36px !important;
+    right: 36px !important;
+    bottom: 36px !important;
   }
   .imagenLucianoTexto {
-    bottom: 40px;
-    left: 50px;
-    right: 50px;
+    left: 36px;
+    right: 36px;
+    bottom: 36px;
   }
+  .carousel-caption h5,
   .imagenLucianoTexto h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
+  .carousel-caption p,
   .imagenLucianoTexto p {
-    font-size: 1.6rem;
+    font-size: 1.05rem;
+  }
+  .carousel-caption .etiqueta,
+  .imagenLucianoTexto .etiqueta {
+    font-size: 1rem;
   }
 }
 
@@ -780,18 +817,6 @@ main {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-/* anula los estilos del carrusel de tratamientos */
-.sobre-mi-carousel .carousel-item {
-  height: auto;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-}
-.sobre-mi-carousel .carousel-inner img {
-  height: auto;
-  object-position: center;
 }
 .sobre-mi-img img {
   width: 100%;
