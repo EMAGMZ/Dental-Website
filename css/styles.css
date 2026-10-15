@@ -178,18 +178,6 @@ main {
   transform: translateY(-2px);
   box-shadow: 0 0 32px rgba(232, 179, 132, 0.5);
 }
-.btn-turno--outline {
-  background-color: transparent;
-  color: var(--dorado);
-  box-shadow: none;
-}
-.btn-turno--outline:hover,
-.btn-turno--outline:focus-visible {
-  background-color: rgba(217, 140, 74, 0.12);
-  border-color: var(--acento-claro);
-  color: var(--acento-claro);
-  box-shadow: none;
-}
 .seccion-cta {
   width: 98%;
   margin: 40px auto 0;
