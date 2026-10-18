@@ -24,15 +24,24 @@ body {
   padding-top: 50px;
 }
 
-/* fondo negro con ondas y brillos que se repite a lo largo de la página */
-main {
+/* fondo negro con ondas y brillos, fijo detrás de todo el contenido mientras se scrollea */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-color: var(--fondo-oscuro);
   background-image:
-    radial-gradient(ellipse 60% 18% at 90% 12%, rgba(217, 140, 74, 0.14), transparent 70%),
-    radial-gradient(ellipse 55% 18% at 5% 62%, rgba(232, 179, 132, 0.09), transparent 70%),
+    radial-gradient(ellipse 60% 35% at 90% 15%, rgba(217, 140, 74, 0.14), transparent 70%),
+    radial-gradient(ellipse 55% 35% at 5% 75%, rgba(232, 179, 132, 0.09), transparent 70%),
     var(--ondas);
-  background-size: 100% 1600px, 100% 1600px, 100% 700px;
-  background-repeat: repeat-y;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+main {
+  background: transparent;
 }
 
 /* NAV */
