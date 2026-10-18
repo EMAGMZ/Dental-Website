@@ -1277,3 +1277,17 @@ footer {
   font-size: 0.75rem;
   color: var(--gris-texto);
 }
+
+/* Aparición de las cards al hacer scroll (js/reveal.js agrega las clases) */
+@keyframes aparecer-card {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal:not(.reveal--visible) {
+  opacity: 0;
+}
+
+.reveal--visible {
+  animation: aparecer-card 0.7s ease-out var(--reveal-delay, 0ms) backwards;
+}
