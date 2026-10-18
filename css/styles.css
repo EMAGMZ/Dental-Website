@@ -412,11 +412,12 @@ main {
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
 }
-/* flechas arriba a la derecha para no tapar el texto */
+/* flechas en el medio de cada lateral */
 .carousel-wrapper .carousel-control-prev,
 .carousel-wrapper .carousel-control-next {
-  top: 16px;
+  top: 50%;
   bottom: auto;
+  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   border: 1px solid rgba(217, 140, 74, 0.6);
@@ -426,8 +427,7 @@ main {
   z-index: 2;
 }
 .carousel-wrapper .carousel-control-prev {
-  left: auto;
-  right: 64px;
+  left: 16px;
 }
 .carousel-wrapper .carousel-control-next {
   right: 16px;
@@ -822,7 +822,9 @@ main {
 .sobre-mi-carousel {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  background-color: #000;
+  border: 1px solid rgba(217, 140, 74, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(217, 140, 74, 0.15);
 }
 .sobre-mi-img img {
   width: 100%;
