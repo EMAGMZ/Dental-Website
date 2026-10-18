@@ -86,6 +86,200 @@
             </div>
         </section>
 
+        <!-- SECCIÓN: AGENDAR TURNO -->
+        <section class="turnos-seccion" id="agendar" aria-labelledby="agendar-titulo">
+            <div class="turnos-container">
+
+                <div class="turnos-info">
+                    <span class="etiqueta">Atención personalizada</span>
+                    <h2 id="agendar-titulo">¿Cómo funciona?</h2>
+                    <p>Completá el formulario con tus datos y el motivo de tu consulta. Nos comunicaremos con vos a la
+                        brevedad para confirmar día y horario.</p>
+                    <ul class="turnos-pasos">
+                        <li>
+                            <span class="turnos-paso-numero">01</span>
+                            <span>Completá el formulario</span>
+                        </li>
+                        <li>
+                            <span class="turnos-paso-numero">02</span>
+                            <span>Te contactamos para confirmar</span>
+                        </li>
+                        <li>
+                            <span class="turnos-paso-numero">03</span>
+                            <span>Asistí a tu consulta</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="turnos-form turnos-wizard" id="wizardTurnos" novalidate>
+
+                    <div class="wizard-progreso">
+                        <div class="wizard-progreso-barra"></div>
+                    </div>
+                    <p class="wizard-progreso-texto">Paso 1 de 6</p>
+
+                    <div class="wizard-pasos">
+
+                        <!-- Paso 1: tratamiento -->
+                        <div class="wizard-paso wizard-paso--activo" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">¿Qué problema querés resolver?</h3>
+                            <div class="wizard-opciones wizard-opciones--grid">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Implantes" class="wizard-opcion-input">
+                                    <span>Dificultad al masticar</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Carillas" class="wizard-opcion-input">
+                                    <span>No me gusta mi sonrisa</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Rehabilitación oral completa"
+                                        class="wizard-opcion-input">
+                                    <span>Me preocupa la funcionalidad de mi boca</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Blanqueamiento" class="wizard-opcion-input">
+                                    <span>Aclarar mi sonrisa</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="tratamiento" value="Otro" class="wizard-opcion-input" id="wizardTratamientoOtro">
+                                    <span>Otro</span>
+                                </label>
+                            </div>
+                            <div class="wizard-otro-campo" id="wizardOtroCampo" hidden>
+                                <textarea id="wizardOtroTexto" class="wizard-otro-textarea" placeholder="Contanos tu situación..." rows="3"></textarea>
+                            </div>
+                        </div>
+
+
+                        <!-- Paso 2: historial del problema -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">¿Hace cuánto tiempo tenés este problema?</h3>
+                            <div class="wizard-opciones wizard-opciones--grid">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="Menos de 1 semana" class="wizard-opcion-input">
+                                    <span>Menos de 1 semana</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 1 semana a 1 mes" class="wizard-opcion-input">
+                                    <span>De 1 semana a 1 mes</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 1 a 3 meses" class="wizard-opcion-input">
+                                    <span>De 1 a 3 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 3 a 6 meses" class="wizard-opcion-input">
+                                    <span>De 3 a 6 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="De 6 meses a 2 años" class="wizard-opcion-input">
+                                    <span>De 6 meses a 2 años</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="Más de 2 años" class="wizard-opcion-input">
+                                    <span>Más de 2 años</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="historial" value="No recuerdo" class="wizard-opcion-input">
+                                    <span>No recuerdo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 3: qué cambiaría en tu vida -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">Si pudieras resolver tu problema hoy, ¿qué cambiaría en tu vida?</h3>
+                            <div class="wizard-opciones">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cambio" value="Comer con mayor comodidad" class="wizard-opcion-input">
+                                    <span>Comer con mayor comodidad</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cambio" value="Sentirme más seguro al hablar y sonreír" class="wizard-opcion-input">
+                                    <span>Me sentiría más seguro al hablar y sonreír</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cambio" value="Recuperar la función de mi boca y mi calidad de vida" class="wizard-opcion-input">
+                                    <span>Solucionar la función de mi boca y recuperar mi calidad de vida</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cambio" value="Volver a sonreír sin preocuparme" class="wizard-opcion-input">
+                                    <span>Volver a sonreír sin preocuparme</span>
+                                </label>
+                            </div>
+                        </div>
+                         <!-- Paso 4: cuándo resolverlo -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">¿Cuándo te gustaría resolverlo?</h3>
+                            <div class="wizard-opciones wizard-opciones--grid">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="Lo antes posible" class="wizard-opcion-input">
+                                    <span>Lo antes posible</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="En los próximos 1-3 meses" class="wizard-opcion-input">
+                                    <span>En los próximos 1-3 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="En los próximos 3-6 meses" class="wizard-opcion-input">
+                                    <span>En los próximos 3-6 meses</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="cuando" value="Todavía no lo decidí" class="wizard-opcion-input">
+                                    <span>Todavía no lo decidí</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 5: presupuesto -->
+                        <div class="wizard-paso" data-tipo="opciones">
+                            <h3 class="wizard-pregunta">La consulta tiene un valor de $30.000. ¿Podés destinar ese
+                                presupuesto ahora?</h3>
+                            <div class="wizard-opciones">
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="presupuesto" value="Sí, puedo ahora" class="wizard-opcion-input">
+                                    <span>Sí, puedo ahora</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="presupuesto" value="Prefiero info antes de decidir"
+                                        class="wizard-opcion-input">
+                                    <span>Prefiero info antes de decidir</span>
+                                </label>
+                                <label class="wizard-opcion">
+                                    <input type="radio" name="presupuesto" value="Necesito otra alternativa"
+                                        class="wizard-opcion-input">
+                                    <span>Necesito otra alternativa</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 6: contacto -->
+                        <div class="wizard-paso" data-tipo="contacto">
+                            <h3 class="wizard-pregunta">¿Cómo te contactamos?</h3>
+                            <div class="turnos-form-grupo">
+                                <label for="wizardNombre">Nombre</label>
+                                <input type="text" id="wizardNombre" placeholder="Tu nombre" autocomplete="name" />
+                            </div>
+                            <div class="turnos-form-grupo">
+                                <label for="wizardTelefono">WhatsApp / Teléfono</label>
+                                <input type="tel" id="wizardTelefono" placeholder="Ej: +54 9 387 000-0000"
+                                    autocomplete="tel" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="wizard-nav">
+                        <button type="button" class="wizard-btn-atras" disabled>Atrás</button>
+                        <button type="button" class="wizard-btn-siguiente btn-sobre-mi" disabled>Siguiente</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
         <!-- SECCIÓN: POR QUÉ ESCUCHARME (prueba social 1) -->
         <section class="porque" id="porque-escucharme" aria-labelledby="porque-escucharme-titulo">
             <div class="porque-grid">
@@ -350,6 +544,7 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/wizard.js" defer></script>
 
 </body>
 
