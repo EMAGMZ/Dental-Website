@@ -349,8 +349,7 @@ main {
 }
 
 /* marco compartido: mismo borde y brillo que el video */
-.carousel-wrapper,
-.imagenLuciano {
+.carousel-wrapper {
   position: relative;
   height: 440px;
   overflow: hidden;
@@ -360,15 +359,13 @@ main {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(217, 140, 74, 0.15);
 }
 @media (min-width: 768px) {
-  .carousel-wrapper,
-  .imagenLuciano {
+  .carousel-wrapper {
     height: 560px;
   }
 }
 
 /* degradé para que el texto se lea sobre la foto */
-.carousel-wrapper .carousel-item::after,
-.imagenLuciano::after {
+.carousel-wrapper .carousel-item::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -392,11 +389,12 @@ main {
   right: 24px;
   bottom: 24px;
   padding: 0;
-  text-align: left;
+  text-align: center;
   color: var(--texto-claro);
   z-index: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
 .carousel-caption h3 {
@@ -411,6 +409,16 @@ main {
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
+}
+/* título fijo del carrusel: no cambia con cada slide */
+.carousel-wrapper .carousel-titulo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  z-index: 2;
 }
 /* flechas en el medio de cada lateral */
 .carousel-wrapper .carousel-control-prev,
@@ -442,66 +450,18 @@ main {
   height: 16px;
 }
 
-/* CARD INNOVACIÓN */
-.imagenLuciano img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.imagenLucianoTexto {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  z-index: 1;
-  color: var(--texto-claro);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.imagenLucianoTexto h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0;
-}
-.imagenLucianoTexto p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
-  margin: 0;
-}
-
 /* etiqueta más chica dentro de las cards */
-.carousel-caption .etiqueta,
-.imagenLucianoTexto .etiqueta {
-  align-self: flex-start;
-  font-size: 0.85rem;
-  margin-bottom: 4px;
-}
 @media (min-width: 768px) {
   .carousel-caption {
     left: 36px;
     right: 36px;
     bottom: 36px;
   }
-  .imagenLucianoTexto {
-    left: 36px;
-    right: 36px;
-    bottom: 36px;
-  }
-  .carousel-caption h3,
-  .imagenLucianoTexto h2 {
+  .carousel-caption h3 {
     font-size: 1.9rem;
   }
-  .carousel-caption p,
-  .imagenLucianoTexto p {
+  .carousel-caption p {
     font-size: 1.05rem;
-  }
-  .carousel-caption .etiqueta,
-  .imagenLucianoTexto .etiqueta {
-    font-size: 1rem;
   }
 }
 

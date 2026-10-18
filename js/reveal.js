@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    var SELECTOR = ".caso-card, .contacto-card, .imagenLuciano, .formacion-item, .turnos-form, .accordion-item";
+    var SELECTOR = ".caso-card, .contacto-card, .carousel-wrapper, .formacion-item, .turnos-form, .accordion-item";
 
     var sinMovimiento = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (sinMovimiento || !("IntersectionObserver" in window)) return;
