@@ -542,6 +542,23 @@ main {
 .turnos-seccion {
   padding: 130px 20px 60px;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+#agendar {
+  scroll-margin-top: 90px;
+}
+
+/* en el index va entre tratamientos y FAQ: sin el espacio extra del navbar fijo */
+.tratamientos ~ .turnos-seccion {
+  padding: 60px 20px;
+}
+@media (min-width: 768px) {
+  .tratamientos ~ .turnos-seccion {
+    padding: 80px 40px;
+  }
+}
 .turnos-container {
   max-width: 1100px;
   margin: 0 auto;
